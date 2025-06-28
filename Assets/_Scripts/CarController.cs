@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour
     private bool onLane1 = true;
     private bool isRunning = true;
     private bool isChanging = true;
-    
+
 
     private Vector3 _startPosition;
     private Quaternion _startRotation;
@@ -43,8 +43,8 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.A) && isChanging)
+
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && isChanging)
         {
             ChangeLane();
         }
@@ -99,11 +99,11 @@ public class CarController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("VatCan"))
         {
-            
+
             SenceManager.Instance.isGoing = true;
             SenceManager.Instance.SetActiveCarCome();
             isChanging = false;
-            float targetZ = (lane1.position.z + lane2.position.z)/2;
+            float targetZ = (lane1.position.z + lane2.position.z) / 2;
 
             // Tween chuyển làn
             Sequence laneChangeSeq = DOTween.Sequence();
