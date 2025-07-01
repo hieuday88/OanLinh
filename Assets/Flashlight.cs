@@ -13,6 +13,6 @@ public class Flashlight : MonoBehaviour, IInteractable
 
     public string Infor()
     {
-        return "Nhấn [E] để nhặt đèn pin";
+        return "Nhấn để nhặt đèn pin";
     }
 }

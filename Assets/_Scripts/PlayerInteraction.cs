@@ -40,7 +40,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
             infoText.text = interactable != null ? interactable.Infor() : "Không thể tương tác";
             infoText.enabled = true;
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Đã tương tác với: " + target.name);
                 if (interactable != null)
