@@ -16,6 +16,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
     private Color originalCrosshairColor;
 
     public bool isBusy = false;
+    public bool isPickup = false;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-
+            isBusy = true;
             crosshairImage.color = Color.white;
             crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             GameObject target = hit.collider.gameObject;
@@ -50,7 +51,8 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
             }
         }
         else
-        {
+        {   
+            isPickup = false;
             if (infoText != null)
                 infoText.enabled = false;
             crosshairImage.color = originalCrosshairColor;

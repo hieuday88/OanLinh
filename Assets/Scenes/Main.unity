@@ -42388,6 +42388,7 @@ MonoBehaviour:
   desText: {fileID: 1426591324}
   crosshairImage: {fileID: 136188856424429462}
   isBusy: 0
+  isPickup: 0
 --- !u!33 &5030594450254547829
 MeshFilter:
   m_ObjectHideFlags: 0
