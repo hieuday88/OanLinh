@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8892656275085346903
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.8900006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.8900006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.51581
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -117.1088
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69226915
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.72163945
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -92.38
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43ec4d22f8db96543a9a8252ec42377c, type: 2}
+    - target: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_Name
+      value: News
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8425662737257813114}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5511110716530316617}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2218823204254728969}
+  m_SourcePrefab: {fileID: 100100000, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+--- !u!1 &8622253730035758342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e5f4daa813991b9468975e1a5c8d58e7, type: 3}
+  m_PrefabInstance: {fileID: 8892656275085346903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8425662737257813114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622253730035758342}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16296345, y: 0.02071447, z: 0.23234478}
+  m_Center: {x: 0.0008484201, y: -0.00768718, z: -0.0036773873}
+--- !u!114 &5511110716530316617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622253730035758342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589196644f1b3ce47b6fdc3ea833c444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "TIN M\u1EDAI, 25/2/2015         C\u1EB7p \u0111\xF4i tr\u1EBB m\u1EA5t t\xEDch
+    m\u1ED9t c\xE1ch b\xED \u1EA9n          C\u01A1 quan ch\u1EE9c n\u0103ng v\u1EABn
+    \u0111ang ti\u1EBFn h\xE0nh \u0111i\u1EC1u tra v\u1EE5 m\u1EA5t t\xEDch k\u1EF3
+    l\u1EA1 x\u1EA3y ra v\xE0o t\u1ED1i ng\xE0y 25/2. Hai ng\u01B0\u1EDDi tr\u1EBB
+    \u2013 m\u1ED9t nam, m\u1ED9t n\u1EEF \u2013 \u0111\u01B0\u1EE3c cho l\xE0 \u0111ang
+    trong m\u1ED1i quan h\u1EC7 t\xECnh c\u1EA3m, \u0111\xE3 kh\xF4ng c\xF2n xu\u1EA5t
+    hi\u1EC7n t\u1EA1i n\u01A1i c\u01B0 tr\xFA k\u1EC3 t\u1EEB h\xF4m \u0111\xF3.         
+    C\u1EA3 hai s\u1ED1ng trong m\u1ED9t c\u0103n nh\xE0 nh\u1ECF \u1EDF r\xECa th\u1ECB
+    tr\u1EA5n, m\u1EDBi d\u1ECDn \u0111\u1EBFn kho\u1EA3ng v\xE0i th\xE1ng tr\u01B0\u1EDBc.
+    Ng\u01B0\u1EDDi d\xE2n xung quanh m\xF4 t\u1EA3 h\u1ECD s\u1ED1ng k\xEDn \u0111\xE1o
+    nh\u01B0ng c\xF3 v\u1EBB h\u1EA1nh ph\xFAc, kh\xF4ng c\xF3 m\xE2u thu\u1EABn
+    g\xEC \u0111\xE1ng ch\xFA \xFD. Tuy nhi\xEAn, m\u1ED9t s\u1ED1 nh\xE2n ch\u1EE9ng
+    cho bi\u1EBFt c\xF4 g\xE1i g\u1EA7n \u0111\xE2y th\u01B0\u1EDDng c\xF3 bi\u1EC3u
+    hi\u1EC7n lo l\u1EAFng, hay gi\u1EADt m\xECnh v\xE0o ban \u0111\xEAm.         
+    \u0110i\u1EC1u khi\u1EBFn nhi\u1EC1u ng\u01B0\u1EDDi r\xF9ng m\xECnh l\xE0 th\u1EDDi
+    \u0111i\u1EC3m m\u1EA5t t\xEDch tr\xF9ng kh\u1EDBp ch\xEDnh x\xE1c v\u1EDBi ng\xE0y
+    tr\xF2n m\u1ED9t n\u0103m k\u1EC3 t\u1EEB khi m\u1ED9t v\u1EE5 tai n\u1EA1n th\u01B0\u01A1ng
+    t\xE2m x\u1EA3y ra v\u1EDBi m\u1ED9t c\xF4 g\xE1i tr\u1EBB trong c\xF9ng khu
+    v\u1EF1c. V\u1EE5 vi\u1EC7c \u0111\u01B0\u1EE3c x\xE1c \u0111\u1ECBnh l\xE0 \"\"ch\u1EBFt
+    do tai n\u1EA1n\"\", nh\u01B0ng ng\u01B0\u1EDDi th\xE2n n\u1EA1n nh\xE2n khi
+    \u0111\xF3 t\u1EEBng kh\u1EB3ng \u0111\u1ECBnh c\xF4 g\xE1i \u0111\xE3 b\u1ECB
+    h\xE3m h\u1EA1i tr\u01B0\u1EDBc khi qua \u0111\u1EDDi.          Hi\u1EC7n t\u1EA1i,
+    kh\xF4ng c\xF3 thi th\u1EC3 n\xE0o \u0111\u01B0\u1EE3c t\xECm th\u1EA5y, nh\u01B0ng
+    c\u0103n nh\xE0 n\u01A1i c\u1EB7p \u0111\xF4i sinh s\u1ED1ng \u0111\xE3 b\u1ECB
+    phong t\u1ECFa \u0111\u1EC3 ph\u1EE5c v\u1EE5 \u0111i\u1EC1u tra. M\u1ED9t nh\xE2n
+    vi\xEAn \u0111i\u1EC1u tra xin gi\u1EA5u t\xEAn ti\u1EBFt l\u1ED9:          \u201CC\xF3
+    nh\u1EEFng d\u1EA5u hi\u1EC7u cho th\u1EA5y h\u1ECD \u0111\xE3 r\u1EDDi \u0111i\u2026
+    nh\u01B0ng kh\xF4ng ph\u1EA3i b\u1EB1ng c\xE1ch th\xF4ng th\u01B0\u1EDDng.\u201D         
+    C\u01B0 d\xE2n s\u1ED1ng g\u1EA7n c\u0103n nh\xE0 cho bi\u1EBFt v\u1EABn th\u1EA5y
+    b\xF3ng m\u1ED9t ng\u01B0\u1EDDi \u0111\u1EE9ng sau r\xE8m c\u1EEDa m\u1ED7i
+    \u0111\xEAm 25/2, \u0111\xFAng v\xE0o khung gi\u1EDD c\u1EB7p \u0111\xF4i bi\u1EBFn
+    m\u1EA5t."
+  title: "M\u1ED9t t\u1EDD b\xE1o \u0111\xE3 c\u0169"
+--- !u!114 &2218823204254728969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622253730035758342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0eadd8d390cf848bb47d0186de4391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 31f31d90dfcbe6243b0c1d6a64957292, type: 2}
+  canInteract: 0

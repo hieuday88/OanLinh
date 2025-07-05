@@ -9,4 +9,17 @@ public class Items : ScriptableObject
     public string name;
     public int value;
     public Sprite image;
+    public GameObject prefab;
+    public ItemType type;
+}
+
+public enum ItemType
+{
+    Paper,
+    News,
+    CrowBar,
+    Doll,
+    Hair,
+    Rope,
+    Key
 }

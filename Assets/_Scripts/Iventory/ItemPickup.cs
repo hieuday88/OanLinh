@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class ItemPickup : MonoBehaviour, IInteractable
+public class ItemPickup : MonoBehaviour
 {
     public Items item;
     private IInteractable interactableImplementation;
+
+    public bool canInteract = false;
 
     void Pickup()
     {
@@ -28,8 +30,5 @@ public class ItemPickup : MonoBehaviour, IInteractable
        
     }
 
-    public string Infor()
-    {
-        return "Đồ vật";
-    }
+    
 }

@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class News : MonoBehaviour, IInteractable
 {
+    public string text;
+    public string title;
 
     public void OnInteract()
     {
-        PlayerInteraction.Instance.desText.GetComponentInChildren<TextMeshProUGUI>().text = @"TIN MỚI, 25/2/2015
+        var items = gameObject.GetComponent<ItemPickup>();
+        if ((items != null && items.canInteract) || (items.item != null && IventoryManager.Instance.canUseItem))
+        {
+            PlayerInteraction.Instance.desText.GetComponentInChildren<TextMeshProUGUI>().text = @"TIN MỚI, 25/2/2015
         Cặp đôi trẻ mất tích một cách bí ẩn
 
         Cơ quan chức năng vẫn đang tiến hành điều tra vụ mất tích kỳ lạ xảy ra vào tối ngày 25/2. Hai người trẻ – một nam, một nữ – được cho là đang trong mối quan hệ tình cảm, đã không còn xuất hiện tại nơi cư trú kể từ hôm đó.
@@ -22,13 +27,16 @@ public class News : MonoBehaviour, IInteractable
         “Có những dấu hiệu cho thấy họ đã rời đi… nhưng không phải bằng cách thông thường.”
 
         Cư dân sống gần căn nhà cho biết vẫn thấy bóng một người đứng sau rèm cửa mỗi đêm 25/2, đúng vào khung giờ cặp đôi biến mất.";
-        PlayerInteraction.Instance.desText.gameObject.SetActive(!PlayerInteraction.Instance.desText.gameObject.activeSelf);
-        PlayerInteraction.Instance.isBusy = !PlayerInteraction.Instance.isBusy;
+            PlayerInteraction.Instance.desText.gameObject.SetActive(!PlayerInteraction.Instance.desText.gameObject
+                .activeSelf);
+            PlayerInteraction.Instance.isBusy = !PlayerInteraction.Instance.isBusy;
+            IventoryManager.Instance.canUseItem = false;
+        }
     }
 
 
     public string Infor()
     {
-        return "Một tờ báo đã cũ";
+        return title;
     }
 }

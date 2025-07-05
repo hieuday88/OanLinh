@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerInteraction : Singleton<PlayerInteraction>
@@ -7,6 +8,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
     public float interactDistance = 3f;
     public LayerMask interactLayer;
     public TextMeshProUGUI infoText;
+    public Image paperImage;
 
     public GameObject desText;
     private Camera mainCam;
@@ -28,12 +30,18 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     void Update()
     {
+        if (ItemUIManager.Instance.isOpen)
+        {
+            return;
+        }
+        
+
         Ray ray = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            isBusy = true;
+            isPickup = true;
             crosshairImage.color = Color.white;
             crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             GameObject target = hit.collider.gameObject;
@@ -43,7 +51,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Đã tương tác với: " + target.name);
+                Debug.Log("Đã tương tác với: " + interactable.Infor());
                 if (interactable != null)
                 {
                     interactable.OnInteract();

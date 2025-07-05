@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d730b958782f4fad81014947618ab, type: 3}
+  m_Name: News
+  m_EditorClassIdentifier: 
+  id: 5
+  name: "T\u1EDD b\xE1o "
+  value: 0
+  image: {fileID: 21300000, guid: f0e726ce28f24e64aad86aecda56d405, type: 3}
+  prefab: {fileID: 8622253730035758342, guid: f61a5a3af424cec4ea60820374f444fa, type: 3}
+  type: 1

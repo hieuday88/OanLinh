@@ -1,21 +1,69 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IventoryManager : Singleton<IventoryManager>
 {
-    List<Items> items = new List<Items>();
+    public List<Items> items = new List<Items>();
     
+    public Transform itemHolder;
+    public GameObject itemPrefab;
+    
+    public Items currentItem;
+    public GameObject currItemPrefab;
+    public bool isTake = false;
+    public bool isTaking = false;
+    public bool isUseItem = false;
+    public bool canUseItem = false;
+
+    private void Update()
+    {
+        if(currItemPrefab == null)
+            isTaking = false;
+        else
+        {
+            isTaking = true;
+        }
+    }
+
     public void AddItem(Items item)
     {
         items.Add(item);
+        currentItem = item;
+        DisplayItems();
+    }
+
+    public Items GetCurrentItem()
+    {
+        return currentItem;
     }
 
     public void DisplayItems()
     {
+        foreach (Transform itemPos in itemHolder)  
+            Destroy(itemPos.gameObject);
+        
         foreach (var item in items)
         {
+            GameObject itemObject = Instantiate(itemPrefab, itemHolder);
             
+            var itemName = itemObject.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
+            var itemImage = itemObject.transform.Find("ItemImage").GetComponent<Image>();
+            
+            itemName.text = item.name;
+            itemImage.sprite = item.image;
+
+            var itemUI = itemObject.GetComponent<ItemInIventory>();
+            itemUI.SetItem(item);
         }
+    }
+
+    public void RemoveItem(Items item)
+    {
+        items.Remove(item);
+        DisplayItems();
     }
 }

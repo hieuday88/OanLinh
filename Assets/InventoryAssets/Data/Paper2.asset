@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Paper2
   m_EditorClassIdentifier: 
   id: 2
-  name: Paper2
+  name: ' Paper 2'
   value: 0
-  image: {fileID: 21300000, guid: 5ca26a1eb2ae66e449727d9b3cb3d519, type: 3}
+  image: {fileID: 21300000, guid: 928c1a2e824402e4fa83f2d48eb23c47, type: 3}
+  prefab: {fileID: 3277902253759767015, guid: e1382da278802774295d92d6cbabf06d, type: 3}
