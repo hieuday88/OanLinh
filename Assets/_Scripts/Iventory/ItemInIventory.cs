@@ -15,7 +15,7 @@ public class ItemInIventory : MonoBehaviour
     public void OnClick()
     {
         // Khi click thì gán prefab vào current
-        
+        Debug.Log("OnClick");
         IventoryManager.Instance.currItemPrefab = item.prefab;
         IventoryManager.Instance.isTake = true;
     }
