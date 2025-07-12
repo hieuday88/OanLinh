@@ -15,14 +15,14 @@ public class PickUpItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Observer.AddObserver("Cam vat the", PickUpItemFromIventory);
+        Observer.AddObserver("Hien vat the", PickUpItemFromIventory);
         Observer.AddObserver("Cat vat the", PutThingAways);
         Observer.AddObserver("Dung vat pham", UseItems);
     }
 
     void OnDestroy()
     {
-        Observer.RemoveListener("Cam vat the", PickUpItemFromIventory);
+        Observer.RemoveListener("Hien vat the", PickUpItemFromIventory);
         Observer.RemoveListener("Cat vat the", PutThingAways);
         Observer.RemoveListener("Dung vat pham", UseItems);
     }
@@ -30,17 +30,16 @@ public class PickUpItem : MonoBehaviour
     public void PickUpItemFromIventory()
     {
         // Lấy prefab từ Inventory
-        itempickedUpPrefab = IventoryManager.Instance.currItemPrefab;
+        itempickedUpPrefab = IventoryManager.Instance.GetItemPrefab();
+        if (itempickedUpPrefab != null)
+        {
+            Debug.Log(itempickedUpPrefab.name);
+        }
 
         // Tạo bản sao tại vị trí tay
-        GameObject spawnedItem = Instantiate(itempickedUpPrefab, pos.position, Quaternion.identity);
+        //GameObject spawnedItem = Instantiate(itempickedUpPrefab, pos.position, Quaternion.identity);
 
-        // Cho item đi theo pos (tay người chơi)
-        spawnedItem.transform.SetParent(pos);
-        spawnedItem.transform.localPosition = Vector3.zero;
-        spawnedItem.transform.localRotation = Quaternion.identity;
-        
-        currentItemInHand = spawnedItem;
+        ItemPreview3D.Instance.ShowItem(itempickedUpPrefab);
         
         // Đóng Inventory + xóa khỏi danh sách
         ItemUIManager.Instance.CloseInventory();
@@ -49,6 +48,9 @@ public class PickUpItem : MonoBehaviour
     }
     public void PutThingAways()
     {
+        ItemPreview3D.Instance.CloseItem();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         IventoryManager.Instance.AddItem(itempickedUpPrefab.GetComponent<ItemPickup>().item);
         IventoryManager.Instance.currItemPrefab = null;
         itempickedUpPrefab = null;

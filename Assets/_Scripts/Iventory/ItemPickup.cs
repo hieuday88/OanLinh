@@ -25,10 +25,7 @@ public class ItemPickup : MonoBehaviour
             Pickup();
     }
 
-    public void OnInteract()
-    {
-       
-    }
+    
 
     
 }

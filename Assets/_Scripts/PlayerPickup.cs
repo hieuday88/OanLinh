@@ -7,10 +7,10 @@ public class PlayerPickup : MonoBehaviour
     private bool hasActive = false;
     void Update()
     {
-        // Xu ly cam nam vat the
+        // Xu ly hien vat the
         if (IventoryManager.Instance.isTake)
         {
-            Observer.Notify("Cam vat the");
+            Observer.Notify("Hien vat the");
             
         }
         // Cat vat the

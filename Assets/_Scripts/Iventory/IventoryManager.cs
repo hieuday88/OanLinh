@@ -29,11 +29,21 @@ public class IventoryManager : Singleton<IventoryManager>
         }
     }
 
+    public GameObject GetItemPrefab()
+    {
+        return currItemPrefab;
+    }
+
     public void AddItem(Items item)
     {
         items.Add(item);
         currentItem = item;
         DisplayItems();
+    }
+
+    public void SetPrefab(GameObject prefab)
+    {
+        currItemPrefab = prefab;
     }
 
     public Items GetCurrentItem()

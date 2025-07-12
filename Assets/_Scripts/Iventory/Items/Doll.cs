@@ -7,7 +7,7 @@ public class Doll : MonoBehaviour, IInteractable
     public string title;
     public void OnInteract()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public string Infor()

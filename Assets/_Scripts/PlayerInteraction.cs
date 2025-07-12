@@ -35,6 +35,10 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
             return;
         }
         
+        // ✅ Ngăn tương tác nếu đang hover UI
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+        
 
         Ray ray = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;

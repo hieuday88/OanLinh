@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Camera
   - Interactable
-  - 
-  - 
+  - ItemInspect
+  - Item3D
   - 
   - 
   - 
