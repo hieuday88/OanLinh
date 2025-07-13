@@ -118,5 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6d85a427b22ea4ab251c3380f34c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeOpen: {fileID: 2501298552756826916, guid: 04c5f6a5f940e1045862364b01b96e4e, type: 3}
-  holder: {fileID: 0}
+  pipeOpen: {fileID: 0}
+  pipeSpawn: {fileID: 0}
+  hair: {fileID: 8859808254626363637, guid: a18e433108aee804baab687386dd7ae4, type: 3}

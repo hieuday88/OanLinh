@@ -6,23 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Hair.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Hair.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/rope0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/rope0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Door.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Door.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MatMa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MatMa.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/Hair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/Hair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lavadero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lavadero.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Pipe/Pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Pipe/Pipe.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/calibrib SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/calibrib SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemInIventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemInIventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/News.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/News.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/IventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/IventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/MatMa/PasswordManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/MatMa/PasswordManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerPickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerPickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPreview3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPreview3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PipeOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PipeOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +118,8 @@
       <workItem from="1751470356208" duration="31738000" />
       <workItem from="1751789498692" duration="1171000" />
       <workItem from="1751871602489" duration="599000" />
-      <workItem from="1752293128322" duration="12693000" />
+      <workItem from="1752293128322" duration="12917000" />
+      <workItem from="1752370829117" duration="3425000" />
     </task>
     <servers />
   </component>

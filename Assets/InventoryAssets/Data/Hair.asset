@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 11
   name: Hair
   value: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: bce458ace13a4b449b2d367c1d368753, type: 3}
   prefab: {fileID: 8859808254626363637, guid: a18e433108aee804baab687386dd7ae4, type: 3}
   type: 4
