@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorOpen : MonoBehaviour,  IInteractable
+public class DoorOpen : MonoBehaviour, IInteractable
 {
 
     public GameObject doorPassWord;
@@ -16,7 +16,7 @@ public class DoorOpen : MonoBehaviour,  IInteractable
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         GameObject currentItem = Instantiate(doorPassWord, holder.position, Quaternion.identity);
-        
+
         currentItem.transform.SetParent(holder);
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.transform.localRotation = Quaternion.identity;
@@ -27,6 +27,7 @@ public class DoorOpen : MonoBehaviour,  IInteractable
     {
         if (PasswordManager.Instance.isWin)
         {
+            Debug.Log("Door is opened");
             var rotation = door.transform.localRotation;
             rotation.z = -99f;
             door.transform.localRotation = rotation;
@@ -34,7 +35,7 @@ public class DoorOpen : MonoBehaviour,  IInteractable
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         hintUI.SetActive(false);
-        
+
     }
 
     public void Update()

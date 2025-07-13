@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Hair : MonoBehaviour, IInteractable
 {
-    public string title;
+    public Items doll32;
     public void OnInteract()
     {
-        throw new System.NotImplementedException();
+        IventoryManager.Instance.AddItem(doll32); ;
     }
 
     public string Infor()
     {
-        return title;
+        return "Một mớ tóc rối bù";
     }
 }

@@ -30,15 +30,14 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     void Update()
     {
-        if (ItemUIManager.Instance.isOpen)
-        {
-            return;
-        }
-        
-        // ✅ Ngăn tương tác nếu đang hover UI
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
-        
+        // if (ItemUIManager.Instance.isOpen)
+        // {
+        //     return;
+        // }
+
+        // if (EventSystem.current.IsPointerOverGameObject())
+        //     return;
+
 
         Ray ray = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
@@ -63,7 +62,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
             }
         }
         else
-        {   
+        {
             isPickup = false;
             if (infoText != null)
                 infoText.enabled = false;

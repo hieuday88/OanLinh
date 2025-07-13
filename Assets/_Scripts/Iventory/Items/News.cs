@@ -7,7 +7,7 @@ public class News : MonoBehaviour, IInteractable
     public string text;
     public string title;
 
-    private bool isReading = false;
+    public bool isReading = false;
 
     public void OnInteract()
     {
