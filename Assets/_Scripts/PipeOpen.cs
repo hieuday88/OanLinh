@@ -7,12 +7,12 @@ public class PipeOpen : MonoBehaviour, IInteractable
     public GameObject pipeOpen;
     public Transform pipeSpawn;
     public GameObject hair;
-    
+
     public void OnInteract()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        
+
         pipeOpen.SetActive(true);
     }
 
@@ -30,9 +30,10 @@ public class PipeOpen : MonoBehaviour, IInteractable
         if (PipeManager.Instance.isWin)
         {
             pipeOpen.SetActive(false);
-           hair.SetActive(true);
+            hair.SetActive(true);
             PipeManager.Instance.isWin = false;
             SetLayer(gameObject, LayerMask.NameToLayer("UI"));
+            this.GetComponent<BoxCollider>().enabled = false;
         }
         else
         {

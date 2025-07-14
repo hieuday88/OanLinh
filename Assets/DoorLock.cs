@@ -5,12 +5,13 @@ using UnityEngine;
 public class DoorLock : MonoBehaviour
 {
     private bool isLock = false;
-    public Transform door;
+    public GameObject door;
     void OnTriggerEnter(Collider other)
     {
         if (isLock)
             return;
-        door.localRotation = Quaternion.Euler(-180, 0, 0);
+        door.transform.localRotation = Quaternion.Euler(-180, 0, 0);
+        door.layer = 8;
         isLock = true;
     }
 }

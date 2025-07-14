@@ -12,7 +12,7 @@ public class chair1 : MonoBehaviour, IInteractable
     public void OnInteract()
     {
         animator.SetTrigger("i1");
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = 0;
     }
 
     public string Infor()
