@@ -30,7 +30,7 @@ public class PipeOpen : MonoBehaviour, IInteractable
         if (PipeManager.Instance.isWin)
         {
             pipeOpen.SetActive(false);
-            GameObject pipe = Instantiate(hair, pipeSpawn.position, Quaternion.identity);
+           hair.SetActive(true);
             PipeManager.Instance.isWin = false;
             SetLayer(gameObject, LayerMask.NameToLayer("UI"));
         }

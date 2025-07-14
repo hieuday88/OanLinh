@@ -25,15 +25,18 @@ public class DoorOpen : MonoBehaviour,  IInteractable
 
     public void CloseDoorPassWord()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        hintUI.SetActive(false);
+        
         if (PasswordManager.Instance.isWin)
         {
             var rotation = door.transform.localRotation;
             rotation.z = -99f;
             door.transform.localRotation = rotation;
+            
         }
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        hintUI.SetActive(false);
+        
         
     }
 
