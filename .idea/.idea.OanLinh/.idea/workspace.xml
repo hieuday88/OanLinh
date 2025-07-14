@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,11 +15,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ff3bcb667574bf9a8630184172fcfbf176600/80/2cdf1712/Object.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/DoorOpen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/DoorOpen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/CrowBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/Iventory/Items/Hair.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/Iventory/Items/Hair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Rope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MatMa/ButtonClick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/PipeOpen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/PipeOpen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/Cong.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/L.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/Ngang.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,6 +114,7 @@
       <workItem from="1752293128322" duration="12917000" />
       <workItem from="1752370829117" duration="3808000" />
       <workItem from="1752415589854" duration="1724000" />
+      <workItem from="1752457249630" duration="313000" />
     </task>
     <servers />
   </component>
