@@ -1,46 +1,33 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using DG.Tweening;
+using System.Collections;
 
 public class LoadSceneManager : Singleton<LoadSceneManager>
 {
-    protected override void Awake()
-    {
-        base.Awake();
-        DontDestroyOnLoad(gameObject);
-    }
+    public Image fadeImage;
+
+    public float fadeDuration = 0.5f;
 
     public void LoadScene(string sceneName)
-    {
-        LoadScenePro(sceneName);
-    }
-
-    public void ReloadScene()
-    {
-        var curSceneName = SceneManager.GetActiveScene().name;
-        LoadScenePro(curSceneName);
-    }
-    
-    private void LoadScenePro(string sceneName)
     {
         StartCoroutine(IELoadScene(sceneName));
     }
 
     private IEnumerator IELoadScene(string sceneName)
     {
-        TransitionFx.Instance.StartLoadScene();
-        var asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-        
-        while (!asyncLoad!.isDone)
-        {
-            float progress = asyncLoad.progress;
-            TransitionFx.Instance.loading.fillAmount = progress;
-            yield return null;
-        }
+        SetAlpha(0f);
+        yield return fadeImage.DOFade(1f, fadeDuration).SetEase(Ease.InOutSine).WaitForCompletion();
+        yield return SceneManager.LoadSceneAsync(sceneName);
+        yield return null;
+        yield return fadeImage.DOFade(0f, fadeDuration).SetEase(Ease.InOutSine).WaitForCompletion();
+    }
 
-        yield return new WaitForSeconds(0.25f);
-        TransitionFx.Instance.loading.fillAmount = 1f;
-        yield return new WaitForSeconds(0.25f);
-        TransitionFx.Instance.EndLoadScene();
+    private void SetAlpha(float alpha)
+    {
+        var color = fadeImage.color;
+        color.a = alpha;
+        fadeImage.color = color;
     }
 }
