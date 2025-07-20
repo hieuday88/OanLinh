@@ -23,7 +23,7 @@ public class ItemUIManager : Singleton<ItemUIManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.I))
             OpenInventory();
     }
 
