@@ -25,7 +25,7 @@ public class DoorOpen : MonoBehaviour, IInteractable
 
     public void CloseDoorPassWord()
     {
-        if (PasswordManager.Instance.isWin)
+        if (PasswordManager.Instance != null && PasswordManager.Instance.isWin)
         {
             Debug.Log("Door is opened");
             var rotation = door.transform.localRotation;
@@ -40,7 +40,8 @@ public class DoorOpen : MonoBehaviour, IInteractable
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || PasswordManager.Instance.isWin)
+        if (Input.GetKeyDown(KeyCode.Escape) || 
+            (PasswordManager.Instance != null && PasswordManager.Instance.isWin))
         {
             CloseDoorPassWord();
         }

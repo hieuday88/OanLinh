@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickUpItem : MonoBehaviour
 {
@@ -35,15 +36,12 @@ public class PickUpItem : MonoBehaviour
         {
             Debug.Log(itempickedUpPrefab.name);
         }
-
-        // Tạo bản sao tại vị trí tay
-        //GameObject spawnedItem = Instantiate(itempickedUpPrefab, pos.position, Quaternion.identity);
-
         ItemPreview3D.Instance.ShowItem(itempickedUpPrefab);
+        
         
         // Đóng Inventory + xóa khỏi danh sách
         ItemUIManager.Instance.CloseInventory();
-        IventoryManager.Instance.RemoveItem(itempickedUpPrefab.GetComponent<ItemPickup>().item);
+        //IventoryManager.Instance.RemoveItem(itempickedUpPrefab.GetComponent<ItemPickup>().item);
         IventoryManager.Instance.isTake = false;
     }
     public void PutThingAways()
@@ -51,11 +49,11 @@ public class PickUpItem : MonoBehaviour
         ItemPreview3D.Instance.CloseItem();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        IventoryManager.Instance.AddItem(itempickedUpPrefab.GetComponent<ItemPickup>().item);
-        IventoryManager.Instance.currItemPrefab = null;
-        itempickedUpPrefab = null;
-        Destroy(currentItemInHand);
-        currentItemInHand = null;
+        // IventoryManager.Instance.AddItem(itempickedUpPrefab.GetComponent<ItemPickup>().item);
+        // IventoryManager.Instance.currItemPrefab = null;
+        // itempickedUpPrefab = null;
+        // Destroy(currentItemInHand);
+        // currentItemInHand = null;
     }
 
     public void UseItems()

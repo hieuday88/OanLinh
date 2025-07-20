@@ -16,5 +16,5 @@ MonoBehaviour:
   name: Doll4
   value: 0
   image: {fileID: 21300000, guid: 1721e39fd6400c248a7fd497205f3617, type: 3}
-  prefab: {fileID: 3668225539344312226, guid: a67c711b867580f4cadf4b6b3fb3a45f, type: 3}
+  prefab: {fileID: 4660077153668551214, guid: d99b7d32d2430454c88d6d97ca390ceb, type: 3}
   type: 3

@@ -303,10 +303,10 @@ PrefabInstance:
       addedObject: {fileID: 4042796861910688015}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67ccb0f5591bf6c489e77609943bb056, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2322687843062148110}
+      addedObject: {fileID: -6415060156323922198}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 67ccb0f5591bf6c489e77609943bb056, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -6415060156323922198}
+      addedObject: {fileID: 7297288856239291080}
   m_SourcePrefab: {fileID: 100100000, guid: 67ccb0f5591bf6c489e77609943bb056, type: 3}
 --- !u!1 &4841781404083498776 stripped
 GameObject:
@@ -334,20 +334,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.4786048, y: 5.003964, z: 3.3878212}
   m_Center: {x: 0.024402365, y: 1.8662589, z: 1.0236844}
---- !u!114 &2322687843062148110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4841781404083498776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0eadd8d390cf848bb47d0186de4391, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: f24e37bbd458ae74ea0f5b57aed49c32, type: 2}
-  canInteract: 0
 --- !u!114 &-6415060156323922198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,3 +347,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: Doll
+--- !u!114 &7297288856239291080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841781404083498776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0eadd8d390cf848bb47d0186de4391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: f24e37bbd458ae74ea0f5b57aed49c32, type: 2}
+  canInteract: 0

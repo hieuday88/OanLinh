@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="" />
+    <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hint1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Data/Doll4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll4.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/_Items/doll4.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Tele1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Tele1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPreview3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemPreview3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,23 +32,19 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6ff3bcb667574bf9a8630184172fcfbf176600/80/2cdf1712/Object.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/DoorOpen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/DoorOpen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/CrowBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/Iventory/Items/Hair.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/Iventory/Items/Hair.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Rope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Iventory/PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MatMa/ButtonClick.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/PipeOpen.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/DuanUnity/OanLinh/OanLinh/Assets/_Scripts/PipeOpen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/Cong.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/L.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/Ngang.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/T.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Tools/Observer/Observer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -114,7 +127,8 @@
       <workItem from="1752293128322" duration="12917000" />
       <workItem from="1752370829117" duration="3808000" />
       <workItem from="1752415589854" duration="1724000" />
-      <workItem from="1752457249630" duration="313000" />
+      <workItem from="1752457249630" duration="8897000" />
+      <workItem from="1752725272031" duration="6911000" />
     </task>
     <servers />
   </component>

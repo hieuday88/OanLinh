@@ -3877,6 +3877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupCamera: {fileID: 0}
   itemHolder: {fileID: 725452907}
+  originalScale: {x: 1, y: 1, z: 1}
   popupRoot: {fileID: 1307231557}
   currentItem: {fileID: 0}
 --- !u!4 &1488870515
@@ -4553,7 +4554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1825781155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5576,6 +5577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1224355334911488212, guid: 6d394026840a42b4192c998e34dc5db5, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4158724673615308363, guid: 6d394026840a42b4192c998e34dc5db5, type: 3}
       propertyPath: m_Name
       value: PopRoot
@@ -5619,6 +5624,10 @@ PrefabInstance:
     - target: {fileID: 4520426672675688386, guid: 6d394026840a42b4192c998e34dc5db5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741840297476142955, guid: 6d394026840a42b4192c998e34dc5db5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
