@@ -97,7 +97,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 55bf92693d915d14481e804e6fbb5554, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4840,7 +4840,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 1e0c764f6ef398643b1b60b145b38d47, type: 2}
   - {fileID: 2100000, guid: a733f6947f47e3140821c2e2f53d61a2, type: 2}
-  - {fileID: 2100000, guid: f4a8e947cda64f341ab47de4eda40100, type: 2}
+  - {fileID: 2100000, guid: ecf7c24e452e5c44094e3fc6d3098296, type: 2}
   - {fileID: 2100000, guid: 62dd5826ef7805c4a9f09eaeacb1abfc, type: 2}
   - {fileID: 2100000, guid: 0a25d28574238574781ab5692c2d49d4, type: 2}
   - {fileID: 2100000, guid: 913ea3da8f35b7f4dba1f5c21f6c0c0a, type: 2}
@@ -32745,7 +32745,7 @@ GameObject:
   - component: {fileID: 900041734}
   m_Layer: 0
   m_Name: CarCome
-  m_TagString: Car
+  m_TagString: CarEnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32762,7 +32762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c935f69c5b59ec244869b858e9e45f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 40
+  _speed: 60
   _carController: {fileID: 137420873}
 --- !u!54 &900041735
 Rigidbody:
@@ -71104,7 +71104,7 @@ GameObject:
   - component: {fileID: 2083768600}
   m_Layer: 0
   m_Name: CarCome (1)
-  m_TagString: Car
+  m_TagString: CarEnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71121,7 +71121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c935f69c5b59ec244869b858e9e45f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 40
+  _speed: 60
   _carController: {fileID: 137420873}
 --- !u!54 &2083768601
 Rigidbody:
@@ -74089,6 +74089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589196644f1b3ce47b6fdc3ea833c444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: 
+  title: 
+  isReading: 0
 --- !u!65 &2133395213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74786,7 +74789,7 @@ SceneRoots:
   - {fileID: 1440141686}
   - {fileID: 2083768605}
   - {fileID: 900041739}
-  - {fileID: 557685238}
   - {fileID: 1429239061}
+  - {fileID: 557685238}
   - {fileID: 228837359}
   - {fileID: 7000598538949197805}

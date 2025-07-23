@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5962762484866696247, guid: c072d395dc9efc3408e03c10e5a890fb, type: 3}
+  - {fileID: 2100000, guid: 2c42283a5c3000b4cacdd4e80eec3f4f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,5 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9662bee497895654c83087663a67a293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
   title: Paper

@@ -6,26 +6,15 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Items item;
-    private IInteractable interactableImplementation;
 
     public bool canInteract = false;
 
-    void Pickup()
+    public void Pickup()
     {
         // Delete Item
-        Destroy(this.gameObject);
-        
+        this.gameObject.SetActive(false);
+
         // Add item
         IventoryManager.Instance.AddItem(this.item);
     }
-
-    void OnMouseDown()
-    {
-        if(PlayerInteraction.Instance.isPickup)
-            Pickup();
-    }
-
-    
-
-    
 }

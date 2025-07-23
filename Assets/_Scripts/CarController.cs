@@ -73,6 +73,11 @@ public class CarController : MonoBehaviour
         {
             StartCoroutine(ResetAfterDelay());
         }
+
+        if (collision.gameObject.CompareTag("CarEnd"))
+        {
+            LoadSceneManager.Instance.LoadScene("Main");
+        }
     }
 
     private IEnumerator ResetAfterDelay()

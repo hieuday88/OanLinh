@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorOpen1 : MonoBehaviour
+public class DoorOpen1 : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public Key key;
+    public string title;
+    public void OnInteract()
     {
-        
+        DoorController door = gameObject.GetComponent<DoorController>();
+        if (door != null && key.isPickedUp)
+        {
+            title = "Mở cửa";
+            door.ToggleDoor();
+        }
+        else
+        {
+            title = "Cửa đã khóa";
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public string Infor()
     {
-        
+        return title;
     }
 }

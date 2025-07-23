@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Hint1 : MonoBehaviour, IInteractable
@@ -8,40 +10,71 @@ public class Hint1 : MonoBehaviour, IInteractable
     public GameObject firstMeet;
     public GameObject doll32;
     public GameObject rope;
+
+    public GameObject nu;
+    public GameObject key;
+    public GameObject Hint2;
+    public GameObject Hint3;
+
+    private string hintText = "";
+
+    private bool haveDoll = false;
+    private bool haveRope = false;
+
     public void OnInteract()
     {
         if (firstTime)
         {
             firstMeet.SetActive(true);
             firstTime = false;
+            hintText = "Cần phải làm gì đó ở đây";
+            DOVirtual.DelayedCall(2f, () =>
+            {
+                hintText = "";
+            });
         }
 
-        // Tạo danh sách tạm để chứa các item cần xóa
-        List<Items> itemsToRemove = new List<Items>();
-
-        foreach (var item in IventoryManager.Instance.items)
+        var ropeItem = IventoryManager.Instance.items.Find(item => item.id == 13);
+        if (ropeItem != null && !haveRope)
         {
-            if (item.id == 13)
-            {
-                rope.SetActive(true);
-                itemsToRemove.Add(item);
-            }
-            else if (item.id == 10)
-            {
-                doll32.SetActive(true);
-                itemsToRemove.Add(item);
-            }
+            rope.SetActive(true);
+            IventoryManager.Instance.RemoveItem(ropeItem);
+            haveRope = true;
         }
 
-        // Sau khi duyệt xong, mới xóa các item khỏi inventory
-        foreach (var item in itemsToRemove)
+        var dollItem = IventoryManager.Instance.items.Find(item => item.id == 10);
+        if (dollItem != null && haveRope && !haveDoll)
         {
-            IventoryManager.Instance.RemoveItem(item);
+            doll32.SetActive(true);
+            IventoryManager.Instance.RemoveItem(dollItem);
+            haveDoll = true;
+            Enough();
         }
     }
 
+
     public string Infor()
     {
-        return "Cần phải làm gì đó ở đây";
+        return hintText;
+    }
+
+    void Enough()
+    {
+        if (haveDoll && haveRope)
+        {
+            nu.SetActive(true);
+            key.SetActive(true);
+            doll32.SetActive(false);
+            hintText = "Có gì đó vừa rơi xuống";
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                hintText = "";
+                nu.SetActive(false);
+                doll32.SetActive(true);
+                gameObject.SetActive(false);
+                Hint2.SetActive(true);
+                Hint3.SetActive(true);
+            });
+        }
     }
 }
