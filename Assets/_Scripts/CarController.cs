@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Sequence = DG.Tweening.Sequence;
 
 public class CarController : MonoBehaviour
@@ -22,6 +23,8 @@ public class CarController : MonoBehaviour
 
     void Start()
     {
+        SoundManager.Instance.PlaySFXLoop(SoundManager.Instance.runCar);
+        SoundManager.Instance.StopMusic();
         rb = GetComponent<Rigidbody>();
 
         _startPosition = lane1.position;
@@ -35,6 +38,7 @@ public class CarController : MonoBehaviour
     {
         if (isRunning)
         {
+            
             Vector3 currentVelocity = rb.velocity;
             currentVelocity.x = -_speed;
             rb.velocity = currentVelocity;
@@ -71,12 +75,34 @@ public class CarController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Car"))
         {
+            SoundManager.Instance.StopSFXLoop();
             StartCoroutine(ResetAfterDelay());
         }
 
         if (collision.gameObject.CompareTag("CarEnd"))
         {
-            LoadSceneManager.Instance.LoadScene("Main");
+            SoundManager.Instance.StopSFXLoop();
+            string currentScene = SceneManager.GetActiveScene().name;
+            SoundManager.Instance.ContinueMusic();
+            if (!SceneManager.GetSceneByName("Main").isLoaded)
+            {
+                // Load "Main" scene ở chế độ additive
+                SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive).completed += (op) =>
+                {
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
+
+                    // Unload scene hiện tại ("Flashback")
+                    SceneManager.UnloadSceneAsync(currentScene);
+                };
+            }
+            else
+            {
+                // Chuyển active scene sang "Main"
+                SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
+
+                // Unload scene hiện tại
+                SceneManager.UnloadSceneAsync(currentScene);
+            }
         }
     }
 

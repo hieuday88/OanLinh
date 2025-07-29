@@ -9,9 +9,15 @@ public class Phone : MonoBehaviour, IInteractable
 
     public Transform hint;
 
+    void Start()
+    {
+        SoundManager.Instance.PlaySFXLoop(SoundManager.Instance.phoneRang);
+    }
+    
     public void OnInteract()
     {
         title = "Nghe điện thoại";
+        SoundManager.Instance.StopSFXLoop();
         dialogue.SetActive(true);
         hint.localPosition = new Vector3(30, -33, -9);
     }

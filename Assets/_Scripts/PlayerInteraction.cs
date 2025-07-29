@@ -8,7 +8,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
     public float interactDistance = 3f;
     public LayerMask interactLayer;
     public TextMeshProUGUI infoText;
-    public Image paperImage;
+    
 
     public GameObject desText;
     private Camera mainCam;

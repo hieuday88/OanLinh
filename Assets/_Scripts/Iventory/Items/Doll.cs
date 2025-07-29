@@ -16,6 +16,7 @@ public class Doll : MonoBehaviour, IInteractable, ISaveable
         }
 
         nu.SetActive(true);
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.horror2);
         DOVirtual.DelayedCall(0.5f, () =>
         {
             nu.SetActive(false);

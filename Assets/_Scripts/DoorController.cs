@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
@@ -9,8 +10,12 @@ public class DoorController : MonoBehaviour
     [Header("Tốc độ xoay")]
     public float openSpeed = 10f;
 
-    private bool isOpen = false;
+    [Header("Trạng thái cửa")]
+    public bool isOpen = false;
+    public bool isLocked = true;  // 🔒 Thêm biến để khóa cửa
+
     private Quaternion targetRotation;
+    private bool isShaking = false;
 
     void Start()
     {
@@ -33,8 +38,18 @@ public class DoorController : MonoBehaviour
 
     public void OpenDoor()
     {
+        if (isLocked)
+        {
+            TryShake(); // 🔄 Nếu đang bị khóa thì không mở, chỉ rung
+            Debug.Log($"{gameObject.name} is locked!");
+            return;
+        }
+
         if (isOpen) return;
+
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.openDoor);
         isOpen = true;
+        
         targetRotation = Quaternion.Euler(openRotation);
         Debug.Log($"{gameObject.name} is opening...");
     }
@@ -42,7 +57,10 @@ public class DoorController : MonoBehaviour
     public void CloseDoor()
     {
         if (!isOpen) return;
+
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.closeLightDoor);
         isOpen = false;
+        isLocked = false;
         targetRotation = Quaternion.Euler(closeRotation);
         Debug.Log($"{gameObject.name} is closing...");
     }
@@ -52,6 +70,33 @@ public class DoorController : MonoBehaviour
         if (isOpen)
             CloseDoor();
         else
-            OpenDoor();
+            OpenDoor(); // 🚪 Gọi OpenDoor sẽ xử lý tự rung nếu đang khóa
     }
+
+    void TryShake()
+    {
+        if (isShaking) return;
+
+        isShaking = true;
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.lockedDoor);
+
+        float originalZ = transform.localEulerAngles.z;
+
+        // Rung chỉ trục Z, giữ nguyên X và Y
+        DOTween.To(
+                () => originalZ,
+                z => transform.localEulerAngles = new Vector3(targetRotation.eulerAngles.x, targetRotation.eulerAngles.y, z),
+                originalZ + 2f, // lệch nhẹ 2 độ
+                0.05f
+            )
+            .SetLoops(4, LoopType.Yoyo)
+            .SetEase(Ease.InOutSine)
+            .OnComplete(() =>
+            {
+                transform.localRotation = targetRotation; // Reset về góc chuẩn
+                isShaking = false;
+            });
+    }
+
+
 }

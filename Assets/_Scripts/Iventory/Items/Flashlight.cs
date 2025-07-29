@@ -6,6 +6,8 @@ public class Flashlight : MonoBehaviour, IInteractable, ISaveable
 
     public void OnInteract()
     {
+        GetComponent<ItemPickup>().Pickup();
+        
         lightObject.SetActive(!lightObject.activeSelf);
         this.gameObject.SetActive(false);
     }

@@ -6,7 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemUIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/ItemUIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorLock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DoorLock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DoorOpen1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DoorOpen1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirstMeet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirstMeet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Flashback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flashback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hint1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Phone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plank.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DoorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Flashlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Flashlight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Paper1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Paper1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +47,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/Ngang.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PipeRotate/T.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerPickup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Tools/Observer/Observer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UnlockAllDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
@@ -117,7 +137,11 @@
       <workItem from="1752370829117" duration="3808000" />
       <workItem from="1752415589854" duration="1724000" />
       <workItem from="1752457249630" duration="8897000" />
-      <workItem from="1752725272031" duration="9238000" />
+      <workItem from="1752725272031" duration="10503000" />
+      <workItem from="1753062370650" duration="535000" />
+      <workItem from="1753336894276" duration="149000" />
+      <workItem from="1753338400981" duration="858000" />
+      <workItem from="1753601278623" duration="20788000" />
     </task>
     <servers />
   </component>

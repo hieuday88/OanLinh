@@ -15,6 +15,7 @@ public class DoorOpen1 : MonoBehaviour, IInteractable
         else
         {
             title = "Cửa đã khóa";
+            door.ToggleDoor();
         }
     }
 

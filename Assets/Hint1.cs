@@ -64,6 +64,7 @@ public class Hint1 : MonoBehaviour, IInteractable
         {
             nu.SetActive(true);
             key.SetActive(true);
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.keyFall);
             doll32.SetActive(false);
             hintText = "Có gì đó vừa rơi xuống";
             DOVirtual.DelayedCall(0.5f, () =>

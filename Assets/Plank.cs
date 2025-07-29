@@ -17,6 +17,7 @@ public class Plank : MonoBehaviour, IInteractable
             title = "Gỡ bỏ";
             this.GetComponent<Rigidbody>().isKinematic = false;
             this.GetComponent<BoxCollider>().enabled = false;
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.woodFall);
             DOVirtual.DelayedCall(3f, () =>
             {
                 this.gameObject.SetActive(false);

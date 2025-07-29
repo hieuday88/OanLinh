@@ -45,7 +45,7 @@ public class PipeManager : Singleton<PipeManager>
     {
         // 1. WaterFall1 xuất hiện bằng cách scale từ trên xuống
         waterFall1.SetActive(true);
-
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.waterFall);
         Vector3 originalScale1 = waterFall1.transform.localScale;
         waterFall1.transform.localScale = new Vector3(originalScale1.x, 0f, originalScale1.z);
 
@@ -59,11 +59,11 @@ public class PipeManager : Singleton<PipeManager>
         for (int i = 0; i < order.Length; i++)
         {
             pipeList[order[i]].EnableGlow(Color.cyan, 1f);
-            yield return new WaitForSeconds(0.17f);
+            yield return new WaitForSeconds(0.5f);
         }
 
         // 3. Hiện WaterFall2
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.42f);
 
         waterFall2.SetActive(true);
 
