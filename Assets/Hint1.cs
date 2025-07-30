@@ -63,6 +63,7 @@ public class Hint1 : MonoBehaviour, IInteractable
         if (haveDoll && haveRope)
         {
             nu.SetActive(true);
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.horror2);
             key.SetActive(true);
             SoundManager.Instance.PlaySFX(SoundManager.Instance.keyFall);
             doll32.SetActive(false);

@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DoorLock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DoorLock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DoorOpen1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DoorOpen1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirstMeet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirstMeet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Flashback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flashback.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hint1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryAssets/Prefabs/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Phone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Phone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plank.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DoorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DoorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Doll.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Flashlight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Flashlight.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Paper1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Iventory/Items/Paper1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PipeRotate/PipeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +123,7 @@
       <workItem from="1753336894276" duration="149000" />
       <workItem from="1753338400981" duration="858000" />
       <workItem from="1753601278623" duration="20788000" />
+      <workItem from="1753865237415" duration="389000" />
     </task>
     <servers />
   </component>

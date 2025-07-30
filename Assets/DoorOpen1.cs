@@ -9,6 +9,7 @@ public class DoorOpen1 : MonoBehaviour, IInteractable
         DoorController door = gameObject.GetComponent<DoorController>();
         if (door != null && key.isPickedUp)
         {
+            door.isLocked = false;
             title = "Mở cửa";
             door.ToggleDoor();
         }
