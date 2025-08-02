@@ -66,6 +66,7 @@ MonoBehaviour:
   - {fileID: 6052167966337277762}
   - {fileID: 3847405010197483617}
   - {fileID: 2279416869655060095}
+  isWin: 0
   waterFall1: {fileID: 4137975605504518351}
   waterFall2: {fileID: 2224645876101767842}
 --- !u!1 &8770473822996978673
@@ -86,7 +87,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2196724946435871727
 Transform:
   m_ObjectHideFlags: 0

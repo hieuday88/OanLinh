@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.4.3 commit date:2025-04-29, commit time:14:09, hash:802179c51ccc</authoring_tool>
+    </contributor>
+    <created>2025-08-01T22:09:57</created>
+    <modified>2025-08-01T22:09:57</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="lambert1-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.5 0.5 0.5 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.5</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="lambert1-material" name="lambert1">
+      <instance_effect url="#lambert1-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="meshId0_name-mesh" name="meshId0_name">
+      <mesh>
+        <source id="meshId0_name-mesh-positions">
+          <float_array id="meshId0_name-mesh-positions-array" count="24">-5.924576 0.7285309 5.579767 6.681599 2.448669 5.579767 6.681599 1.590576 4.003996 6.681599 0.7285309 -0.7233222 6.681599 0.7285309 -7.026412 -5.924576 0.7285309 -7.026412 6.681599 1.103088 2.428223 6.681599 0.8895264 0.8524509</float_array>
+          <technique_common>
+            <accessor source="#meshId0_name-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId0_name-mesh-normals">
+          <float_array id="meshId0_name-mesh-normals-array" count="21">-0.003308117 0.9999408 -0.0103625 -0.1189846 0.8719887 -0.4748455 -0.1108015 0.9161528 -0.3852105 0 1 0 -0.002229094 0.9999876 -0.004458248 -0.0801379 0.975559 -0.2046039 -0.05546265 0.9919177 -0.1141193</float_array>
+          <technique_common>
+            <accessor source="#meshId0_name-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="meshId0_name-mesh-map-0">
+          <float_array id="meshId0_name-mesh-map-0-array" count="36">0.009876966 0.009876966 0.990123 0.009876966 0.990123 0.132407 0.009876966 0.990123 0.009876966 0.009876966 0.990123 0.5 0.990123 0.5 0.990123 0.990123 0.009876966 0.990123 0.009876966 0.009876966 0.990123 0.254938 0.990123 0.377469 0.009876966 0.009876966 0.990123 0.377469 0.990123 0.5 0.009876966 0.009876966 0.990123 0.132407 0.990123 0.254938</float_array>
+          <technique_common>
+            <accessor source="#meshId0_name-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="meshId0_name-mesh-vertices">
+          <input semantic="POSITION" source="#meshId0_name-mesh-positions"/>
+        </vertices>
+        <triangles material="lambert1-material" count="6">
+          <input semantic="VERTEX" source="#meshId0_name-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#meshId0_name-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#meshId0_name-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 5 3 3 0 0 4 3 4 5 3 4 6 4 3 7 5 3 8 0 0 9 6 5 10 7 6 11 0 0 12 7 6 13 3 4 14 0 0 15 2 2 16 6 5 17</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="polySurface7" name="polySurface7" type="NODE">
+        <matrix sid="transform">1 0 0 -53.4921 0 7.54979e-8 -1 -5.003102 0 1 7.54979e-8 136.507 0 0 0 1</matrix>
+        <instance_geometry url="#meshId0_name-mesh" name="polySurface7">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="lambert1-material" target="#lambert1-material">
+                <bind_vertex_input semantic="meshId0-tex0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

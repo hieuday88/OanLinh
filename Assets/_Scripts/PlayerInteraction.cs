@@ -8,7 +8,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
     public float interactDistance = 3f;
     public LayerMask interactLayer;
     public TextMeshProUGUI infoText;
-    
+
 
     public GameObject desText;
     private Camera mainCam;
@@ -30,34 +30,30 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     void Update()
     {
-        // if (ItemUIManager.Instance.isOpen)
-        // {
-        //     return;
-        // }
-
-        // if (EventSystem.current.IsPointerOverGameObject())
-        //     return;
-
 
         Ray ray = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-            isPickup = true;
-            crosshairImage.color = Color.white;
-            crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+
             GameObject target = hit.collider.gameObject;
             IInteractable interactable = target.GetComponent<IInteractable>();
-            infoText.text = interactable != null ? interactable.Infor() : "Không thể tương tác";
-            infoText.enabled = true;
 
-            if (Input.GetMouseButtonDown(0))
+            if (interactable != null)
             {
-                Debug.Log("Đã tương tác với: " + interactable.Infor());
-                if (interactable != null)
+                isPickup = true;
+                crosshairImage.color = Color.white;
+                crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                infoText.text = interactable != null ? interactable.Infor() : "Không thể tương tác";
+                infoText.enabled = true;
+                if (Input.GetMouseButtonDown(0))
                 {
-                    interactable.OnInteract();
+                    Debug.Log("Đã tương tác với: " + interactable.Infor());
+                    if (interactable != null)
+                    {
+                        interactable.OnInteract();
+                    }
                 }
             }
         }

@@ -1,12 +1,14 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Flashback : MonoBehaviour, IInteractable
 {
     public string title = "Có một ký ức mơ hồ ở đây";
+    public GameObject note;
+    public GameObject end;
     public void OnInteract()
     {
-        // Nếu scene "Flashback" chưa được load, load nó ở chế độ additive
         if (!SceneManager.GetSceneByName("Flashback").isLoaded)
         {
             SceneManager.LoadSceneAsync("Flashback", LoadSceneMode.Additive).completed += (op) =>
@@ -16,11 +18,16 @@ public class Flashback : MonoBehaviour, IInteractable
         }
         else
         {
-            // Nếu đã load rồi thì chỉ cần chuyển active
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Flashback"));
         }
 
         title = "";
+
+        DOVirtual.DelayedCall(1f, () =>
+        {
+            note.SetActive(true);
+            end.SetActive(true);
+        });
     }
 
     public string Infor()

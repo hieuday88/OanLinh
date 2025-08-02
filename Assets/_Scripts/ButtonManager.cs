@@ -9,6 +9,8 @@ public class ButtonManager : Singleton<ButtonManager>
     public void OnPlayButtonClicked()
     {
         LoadSceneManager.Instance.LoadScene("Main");
+        SoundManager.Instance.musicAudioSource.clip = SoundManager.Instance.musicClipIn;
+        SoundManager.Instance.musicAudioSource.Play();
     }
 
     public void OnSettingsButtonClicked()

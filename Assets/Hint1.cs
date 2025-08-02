@@ -65,7 +65,6 @@ public class Hint1 : MonoBehaviour, IInteractable
             nu.SetActive(true);
             SoundManager.Instance.PlaySFX(SoundManager.Instance.horror2);
             key.SetActive(true);
-            SoundManager.Instance.PlaySFX(SoundManager.Instance.keyFall);
             doll32.SetActive(false);
             hintText = "Có gì đó vừa rơi xuống";
             DOVirtual.DelayedCall(0.5f, () =>
@@ -76,6 +75,7 @@ public class Hint1 : MonoBehaviour, IInteractable
                 gameObject.SetActive(false);
                 Hint2.SetActive(true);
                 Hint3.SetActive(true);
+                SoundManager.Instance.PlaySFX(SoundManager.Instance.keyFall);
             });
         }
     }

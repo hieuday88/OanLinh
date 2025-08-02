@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
@@ -10,6 +11,10 @@ public class FirstPersonMovement : MonoBehaviour
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
+
+    public FirstPersonLook playerLook;
+
+    public GameObject cursor;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -27,9 +32,12 @@ public class FirstPersonMovement : MonoBehaviour
     {
         if (PlayerInteraction.Instance.isBusy)
         {
-
+            //playerLook.enabled = false;
+            cursor.SetActive(false);
             return;
         }
+        //playerLook.enabled = true;
+        cursor.SetActive(true);
         // Update IsRunning from input.
         IsRunning = canRun && Input.GetKey(runningKey);
 

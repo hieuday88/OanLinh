@@ -17,7 +17,6 @@ public class CarController : MonoBehaviour
     private bool isRunning = true;
     private bool isChanging = true;
 
-
     private Vector3 _startPosition;
     private Quaternion _startRotation;
 
@@ -38,7 +37,6 @@ public class CarController : MonoBehaviour
     {
         if (isRunning)
         {
-            
             Vector3 currentVelocity = rb.velocity;
             currentVelocity.x = -_speed;
             rb.velocity = currentVelocity;
@@ -60,7 +58,6 @@ public class CarController : MonoBehaviour
 
         float targetZ = onLane1 ? lane1.position.z : lane2.position.z;
 
-        // Tween chuyển làn
         Sequence laneChangeSeq = DOTween.Sequence();
         laneChangeSeq.Append(transform.DOMoveZ(targetZ, 0.7f).SetEase(Ease.OutCubic));
         laneChangeSeq.Join(transform.DOShakeRotation(
@@ -77,30 +74,26 @@ public class CarController : MonoBehaviour
         {
             SoundManager.Instance.StopSFXLoop();
             StartCoroutine(ResetAfterDelay());
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.crashCar);
         }
 
         if (collision.gameObject.CompareTag("CarEnd"))
         {
+            SoundManager.Instance.PlaySFX(SoundManager.Instance.crashCar);
             SoundManager.Instance.StopSFXLoop();
             string currentScene = SceneManager.GetActiveScene().name;
             SoundManager.Instance.ContinueMusic();
             if (!SceneManager.GetSceneByName("Main").isLoaded)
             {
-                // Load "Main" scene ở chế độ additive
                 SceneManager.LoadSceneAsync("Main", LoadSceneMode.Additive).completed += (op) =>
                 {
                     SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
-
-                    // Unload scene hiện tại ("Flashback")
                     SceneManager.UnloadSceneAsync(currentScene);
                 };
             }
             else
             {
-                // Chuyển active scene sang "Main"
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
-
-                // Unload scene hiện tại
                 SceneManager.UnloadSceneAsync(currentScene);
             }
         }
@@ -123,7 +116,9 @@ public class CarController : MonoBehaviour
         yield return null;
         isChanging = true;
         isRunning = true;
+        SoundManager.Instance.PlaySFXLoop(SoundManager.Instance.runCar);
         SenceManager.Instance.isGoing = false;
+
     }
 
     private void OnTriggerEnter(Collider other)

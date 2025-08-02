@@ -12,6 +12,7 @@ public class News : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.read);
         if (!isReading)
         {
             ShowNews();

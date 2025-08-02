@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.786
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -304,19 +304,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 3833037013080583965}
   sfxAudioSource: {fileID: 958617003207658441}
-  musicClip: {fileID: 8300000, guid: 6c459579decae714cbfa302d2250b255, type: 3}
+  musicClipIn: {fileID: 8300000, guid: 6c459579decae714cbfa302d2250b255, type: 3}
+  musicClipOut: {fileID: 8300000, guid: e2c995d3bf4283e43abd66617e67c9ac, type: 3}
+  credit: {fileID: 0}
   clickClip: {fileID: 8300000, guid: 1b45f483dd1ea79468bdcf6d9169d408, type: 3}
   openDoor: {fileID: 8300000, guid: 84454e90522afbe428862e83bbb40cd3, type: 3}
   closeDoor: {fileID: 8300000, guid: 6e3a57068d90eb94b93bf2ea4862530b, type: 3}
   closeLightDoor: {fileID: 8300000, guid: 28bbe31af7ee8124782914e9e7bd745d, type: 3}
   lockedDoor: {fileID: 8300000, guid: 9b1d76e3b7804da45be93720bd0c4e03, type: 3}
+  read: {fileID: 8300000, guid: 93f33cd15b7e99b4da0e5d8a6bf5f126, type: 3}
   knife: {fileID: 8300000, guid: 742dca87b1660ea459315b69e1bb404f, type: 3}
-  horror1: {fileID: 8300000, guid: dd9543da65a514840a1a515768c090ed, type: 3}
-  horror2: {fileID: 8300000, guid: e6d20305a9e61424384543f34cdd5aae, type: 3}
+  horror1: {fileID: 8300000, guid: 20c02ec71659e534d9736e8939ad1213, type: 3}
+  horror2: {fileID: 8300000, guid: 51f4b7d15f5d229498ac9aa8abd1ab4d, type: 3}
   waterFall: {fileID: 8300000, guid: 07ccb562af1a95e42aaf0ea0bfc24f69, type: 3}
-  keyFall: {fileID: 8300000, guid: 2f9d27af0e30b8641b0dc487a23115e8, type: 3}
+  keyFall: {fileID: 8300000, guid: 4381bcda768be354e8bbd898e03c0c8f, type: 3}
   woodFall: {fileID: 8300000, guid: c946a3e1f25c7244ea588e6026ca5f67, type: 3}
   phoneRang: {fileID: 8300000, guid: 3d18774847484b34da60cfb592fb7be7, type: 3}
   wind: {fileID: 8300000, guid: f1070688f86a90847a8a3b9ec43ceb82, type: 3}
   ting: {fileID: 8300000, guid: 229671b5c781fc44da60269f2e7b32d2, type: 3}
   runCar: {fileID: 8300000, guid: 086b623b717558248b8c1557f05a50d3, type: 3}
+  crashCar: {fileID: 8300000, guid: b3e007176d50ebd4dbf81018a9f298d8, type: 3}

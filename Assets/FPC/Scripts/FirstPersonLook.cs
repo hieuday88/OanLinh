@@ -27,6 +27,12 @@ public class FirstPersonLook : MonoBehaviour
 
     void Update()
     {
+        // if (PlayerInteraction.Instance.isBusy)
+        // {
+        //     frameVelocity = Vector2.zero;
+        //     velocity = Vector2.zero;
+        //     return;
+        // }
         // Get smooth velocity.
         Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
