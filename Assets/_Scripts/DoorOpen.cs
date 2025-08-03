@@ -40,7 +40,7 @@ public class DoorOpen : MonoBehaviour, IInteractable
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || 
+        if (Input.GetKeyDown(KeyCode.Escape) ||
             (PasswordManager.Instance != null && PasswordManager.Instance.isWin))
         {
             CloseDoorPassWord();
@@ -49,6 +49,6 @@ public class DoorOpen : MonoBehaviour, IInteractable
 
     public string Infor()
     {
-        return "DoorOpen";
+        return "Mở cửa";
     }
 }

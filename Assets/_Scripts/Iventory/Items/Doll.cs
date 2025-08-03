@@ -16,11 +16,13 @@ public class Doll : MonoBehaviour, IInteractable, ISaveable
         }
 
         nu.SetActive(true);
+        PlayerInteraction.Instance.Jumpscare();
         SoundManager.Instance.PlaySFX(SoundManager.Instance.horror2);
         DOVirtual.DelayedCall(0.5f, () =>
         {
             nu.SetActive(false);
             firstTime = true;
+            PlayerInteraction.Instance.ResetScare();
         });
         GetComponent<ItemPickup>().Pickup();
     }

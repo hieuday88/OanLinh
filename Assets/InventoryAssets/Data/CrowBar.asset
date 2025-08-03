@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CrowBar
   m_EditorClassIdentifier: 
   id: 6
-  name: CrowBar
+  name: "X\xE0 beng"
   value: 0
   image: {fileID: 21300000, guid: 8be88da44a9a7f54abc38b59a972e444, type: 3}
   prefab: {fileID: 5956301985075760996, guid: cd29f43a5223df84d9b824746aa98c30, type: 3}

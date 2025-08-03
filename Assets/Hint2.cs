@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class Hint2 : MonoBehaviour, IInteractable
 {
-    public Items doll1;
-    public GameObject doll_1;
-
     public GameObject _doll1;
     public GameObject _doll2;
     public GameObject dark;
@@ -17,10 +14,8 @@ public class Hint2 : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        if (!doll_1.activeSelf)
+        if (ItemPlacer.Instance.TryPlaceItem(7, _doll1))
         {
-            _doll1.SetActive(true);
-            IventoryManager.Instance.RemoveItem(doll1);
             if (_doll2.activeSelf)
                 dark.SetActive(false);
             hintText.SetActive(false);

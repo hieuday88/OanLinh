@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Key
   m_EditorClassIdentifier: 
   id: 12
-  name: Key
+  name: "Ch\xECa kho\xE1"
   value: 0
   image: {fileID: 21300000, guid: 7508a0b6eac7e1a4baf10347bf8aa6ad, type: 3}
   prefab: {fileID: 4039528319802306611, guid: ebdf4be2722fab84ab00c7371daa3d0e, type: 3}

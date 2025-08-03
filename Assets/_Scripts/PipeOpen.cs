@@ -47,6 +47,6 @@ public class PipeOpen : MonoBehaviour, IInteractable
     }
     public string Infor()
     {
-        return "PipeOpen";
+        return "Có gì đó kẹt ở đây";
     }
 }

@@ -9,6 +9,8 @@ public class Hair : MonoBehaviour, IInteractable, ISaveable
     private bool haveDoll = false;
     private string hintText = "Một mớ tóc rối bù";
 
+    public GameObject doll2;
+
     public void OnInteract()
     {
         foreach (var item in IventoryManager.Instance.items)
@@ -19,6 +21,7 @@ public class Hair : MonoBehaviour, IInteractable, ISaveable
                 IventoryManager.Instance.AddItem(doll32);
                 haveDoll = true;
                 this.gameObject.SetActive(false);
+                doll2.SetActive(true);
                 return;
             }
         }

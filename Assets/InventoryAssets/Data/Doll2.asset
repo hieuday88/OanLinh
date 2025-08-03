@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Doll2
   m_EditorClassIdentifier: 
   id: 8
-  name: Doll2
+  name: "Em b\xE9"
   value: 0
   image: {fileID: 21300000, guid: 13ac4ba9a188e174fa45220f7980b136, type: 3}
   prefab: {fileID: 6123214060884577105, guid: 658e7634f68e8284c867a769ad55da2e, type: 3}
