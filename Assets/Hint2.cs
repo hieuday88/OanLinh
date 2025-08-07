@@ -8,6 +8,7 @@ public class Hint2 : MonoBehaviour, IInteractable
     public GameObject _doll1;
     public GameObject _doll2;
     public GameObject dark;
+ 
     public string hint;
 
     public GameObject hintText;
@@ -17,8 +18,10 @@ public class Hint2 : MonoBehaviour, IInteractable
         if (ItemPlacer.Instance.TryPlaceItem(7, _doll1))
         {
             if (_doll2.activeSelf)
-                dark.SetActive(false);
-            hintText.SetActive(false);
+            
+                hintText.SetActive(false);
+            dark.SetActive(false); 
+            
         }
         else
         {

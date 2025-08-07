@@ -37,6 +37,27 @@ public class SoundManager : Singleton<SoundManager>
 
     public AudioClip crashCar;
 
+    public void SetMusicVolume(float volume)
+    {
+        musicAudioSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxAudioSource.volume = volume;
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    public float GetSFXVolume()
+    {
+        return PlayerPrefs.GetFloat("SFXVolume", 1f);
+    }
+
+    public float GetMusicVolume()
+    {
+        return PlayerPrefs.GetFloat("MusicVolume", 1f);
+    }
     void Start()
     {
         musicAudioSource.clip = musicClipOut;

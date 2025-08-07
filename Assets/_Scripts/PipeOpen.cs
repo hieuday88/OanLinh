@@ -7,13 +7,17 @@ public class PipeOpen : MonoBehaviour, IInteractable
     public GameObject pipeOpen;
     public Transform pipeSpawn;
     public GameObject hair;
+    public CameraMove cameraMove;
 
     public void OnInteract()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
-        pipeOpen.SetActive(true);
+        cameraMove.TranCamera(() =>
+        {
+            pipeOpen.SetActive(true);
+        });
+        
     }
 
     public void Update()

@@ -33,21 +33,32 @@ public class FirstPersonLook : MonoBehaviour
         //     velocity = Vector2.zero;
         //     return;
         // }
-        // Get smooth velocity.
+
+        // Lấy sensitivity từ PlayerPrefs (nếu chưa set thì mặc định là 1f)
+        float sensitivity = PlayerPrefs.GetFloat("MouseSensitivity", 2f);
+
+        // Lấy mouse input
         Vector2 mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+
+        // Áp dụng sensitivity
         Vector2 rawFrameVelocity = Vector2.Scale(mouseDelta, Vector2.one * sensitivity);
+
+        // Làm mượt chuột
         frameVelocity = Vector2.Lerp(frameVelocity, rawFrameVelocity, 1 / smoothing);
         velocity += frameVelocity;
         velocity.y = Mathf.Clamp(velocity.y, -90, 90);
 
-        // Rotate camera up-down and controller left-right from velocity.
+        // Xoay camera theo trục dọc
         transform.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
+
+        // Xoay nhân vật theo trục ngang
         character.localRotation = Quaternion.AngleAxis(velocity.x, Vector3.up);
 
-        // Rotate flashlight with camera.
+        // Xoay flashlight nếu có
         if (flashlight != null)
         {
             flashlight.localRotation = Quaternion.AngleAxis(-velocity.y, Vector3.right);
         }
     }
+
 }

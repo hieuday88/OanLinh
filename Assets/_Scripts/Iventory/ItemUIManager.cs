@@ -1,17 +1,24 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemUIManager : Singleton<ItemUIManager>
 {
-    public GameObject openPrefab;    // Panel UI
-    public GameObject openBtn;       // Button để nhấn hiệu ứng
+    public GameObject openPrefab;    
+    public GameObject openBtn;       
+    public GameObject pause;       
+    public GameObject setting;       
+    public FirstPersonLook firstLook;
+    public Rigidbody rb;
     [SerializeField] public bool isOpen = false;
 
     private RectTransform rectTrans;
     private Vector2 hiddenPos = new Vector2(0, -800); // vị trí ẩn bên dưới
     private Vector2 shownPos = new Vector2(-300, 0);         // vị trí hiển thị
-
+    
+    public bool isSettingOpen = false;
+    
     private void Start()
     {
         rectTrans = openPrefab.GetComponent<RectTransform>();
@@ -25,8 +32,55 @@ public class ItemUIManager : Singleton<ItemUIManager>
     {
         if (Input.GetKeyDown(KeyCode.I))
             OpenInventory();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (!isSettingOpen)
+            {
+                pause.SetActive(true);
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+                firstLook.enabled = false;
+                rb.isKinematic = true;
+                isSettingOpen = true;
+            }
+            else
+            {
+                // Nếu đã mở menu → đóng lại
+                //Continue();
+            }
+        }
     }
 
+    public void Continue()
+    {
+        pause.SetActive(!pause.activeSelf);
+        // Ẩn chuột và khóa trong game (ví dụ FPS)
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        firstLook.enabled = true;
+        rb.isKinematic = false;
+        isSettingOpen = false;
+    }
+
+    public void Setting()
+    {
+        setting.SetActive(true);
+        pause.SetActive(false);
+    }
+
+    public void OutSetting()
+    {
+        setting.SetActive(false);
+        pause.SetActive(true);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }    
     public void OpenInventory()
     {
         // Nút nhấn hiệu ứng scale
@@ -48,6 +102,7 @@ public class ItemUIManager : Singleton<ItemUIManager>
                 openPrefab.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                
             });
         }
         else
