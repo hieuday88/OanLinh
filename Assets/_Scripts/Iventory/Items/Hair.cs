@@ -22,6 +22,7 @@ public class Hair : MonoBehaviour, IInteractable, ISaveable
                 haveDoll = true;
                 this.gameObject.SetActive(false);
                 doll2.SetActive(true);
+                SoundManager.Instance.PlaySFXLoop(SoundManager.Instance.baby);
                 return;
             }
         }

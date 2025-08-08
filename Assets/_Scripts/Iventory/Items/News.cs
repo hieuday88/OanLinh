@@ -31,7 +31,7 @@ public class News : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        if (isReading && Input.GetMouseButtonDown(0))
+        if (isReading && Input.GetMouseButtonDown(1))
         {
             HideNews();
         }

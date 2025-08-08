@@ -1,5 +1,7 @@
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,5 +18,8 @@ public class ItemPickup : MonoBehaviour
 
         // Add item
         IventoryManager.Instance.AddItem(this.item);
+
+        if (item.id == 8)
+            SoundManager.Instance.StopSFXLoop();
     }
 }

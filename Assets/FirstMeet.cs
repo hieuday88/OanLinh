@@ -9,9 +9,12 @@ public class FirstMeet : MonoBehaviour
     public GameObject firstMeet;
     public GameObject dool31;
     public Animator animator;
+
+    public GameObject door;
     void OnTriggerEnter(Collider other)
     {
         knife.SetActive(true);
+        door.SetActive(false);
         SoundManager.Instance.PlaySFX(SoundManager.Instance.knife);
         firstMeet.SetActive(true);
         animator.SetTrigger("i2");

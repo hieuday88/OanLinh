@@ -25,5 +25,7 @@ public class End : MonoBehaviour, IInteractable
     public void BackToHome()
     {
         LoadSceneManager.Instance.LoadScene("MainMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }

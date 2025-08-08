@@ -28,6 +28,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
     public bool isPickup = false;
 
     public Volume volume;
+    private GameObject lastTarget = null;
 
     void Start()
     {
@@ -35,47 +36,55 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
         originalCrosshairColor = crosshairImage.color;
         if (infoText != null)
             infoText.enabled = false;
+
     }
+
+
 
     void Update()
     {
-
         Ray ray = mainCam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, interactDistance, interactLayer))
         {
-
             GameObject target = hit.collider.gameObject;
             IInteractable interactable = target.GetComponent<IInteractable>();
 
             if (interactable != null)
             {
+                // Chỉ cập nhật UI khi khác vật cũ
+                if (target != lastTarget)
+                {
+                    lastTarget = target;
+                    infoText.text = interactable.Infor();
+                    infoText.enabled = true;
+                    crosshairImage.color = Color.white;
+                    crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+                }
+
                 isPickup = true;
-                crosshairImage.color = Color.white;
-                crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-                infoText.text = interactable != null ? interactable.Infor() : "Không thể tương tác";
-                infoText.enabled = true;
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     Debug.Log("Đã tương tác với: " + interactable.Infor());
-                    if (interactable != null)
-                    {
-                        interactable.OnInteract();
-                    }
+                    interactable.OnInteract();
                 }
+                return; // tránh else phía dưới
             }
         }
-        else
+
+        // Nếu không hit hoặc không phải interactable
+        if (lastTarget != null)
         {
-            isPickup = false;
-            if (infoText != null)
-                infoText.enabled = false;
+            lastTarget = null;
+            infoText.enabled = false;
             crosshairImage.color = originalCrosshairColor;
             crosshairImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-
+            isPickup = false;
         }
     }
+
 
     public void Jumpscare()
     {
@@ -142,10 +151,10 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     public void PlayOpenShake()
     {
-     Transform cam = mainCam.transform; // Thường là Main Camera
-    float shakeDuration = 1f;
-     float shakeStrength = 0.3f;
-     int vibrato = 20;
+        Transform cam = mainCam.transform; // Thường là Main Camera
+        float shakeDuration = 1f;
+        float shakeStrength = 0.3f;
+        int vibrato = 20;
         // Reset trước khi rung để không chồng hiệu ứng
         cam.DOKill();
         Vector3 originalPos = cam.localPosition;

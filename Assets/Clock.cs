@@ -88,7 +88,7 @@ public class Clock : MonoBehaviour, IInteractable
             Debug.Log("Đã mở khóa đồng hồ!");
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.V))
             ExitInteraction();
     }
 

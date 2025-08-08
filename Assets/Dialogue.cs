@@ -35,6 +35,7 @@ public class Dialogue : MonoBehaviour
         currentLine = 0;
         dialogueText.text = "";
         StartCoroutine(TypeLine());
+        PlayerInteraction.Instance.isBusy = true;
     }
 
     IEnumerator TypeLine()
@@ -65,5 +66,6 @@ public class Dialogue : MonoBehaviour
         StopAllCoroutines();
         dialogueText.text = "";
         currentLine = 0;
+        PlayerInteraction.Instance.isBusy = false;
     }
 }

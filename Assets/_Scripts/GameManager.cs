@@ -12,10 +12,11 @@ public class GameManager : Singleton<GameManager>
         {
             SoundManager.Instance.PlaySFX(SoundManager.Instance.clickClip);
             Debug.Log("click");
+            Debug.Log(PlayerInteraction.Instance.isBusy);
         }
 
-      
-        
+
+
     }
 
 

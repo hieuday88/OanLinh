@@ -9,7 +9,7 @@ public class Hint2 : MonoBehaviour, IInteractable
     public GameObject _doll1;
     public GameObject _doll2;
     public GameObject dark;
- 
+
     public string hint;
 
     public GameObject hintText;
@@ -20,13 +20,13 @@ public class Hint2 : MonoBehaviour, IInteractable
         {
             if (_doll2.activeSelf)
             {
-                dark.SetActive(false); 
+                dark.SetActive(false);
                 hintText.SetActive(false);
                 Effect();
             }
-            
-            
-            
+
+
+
         }
         else
         {
@@ -63,12 +63,12 @@ public class Hint2 : MonoBehaviour, IInteractable
         seq2.Append(_doll2.transform.DOMoveY(originalPos2.y + upDistance, upTime).SetEase(Ease.OutQuad))
             .Append(_doll2.transform.DOShakePosition(shakeTime, new Vector3(0f, 0f, shakeStrength), vibrato))
             .Append(_doll2.transform.DOMoveY(originalPos2.y, downTime).SetEase(Ease.InQuad));
-        
+
         DOVirtual.DelayedCall(1f, () =>
         {
             PlayerInteraction.Instance.PlayOpenShake();
-        }); 
-        
+        });
+
         PlayerInteraction.Instance.Jumpscare();
         DOVirtual.DelayedCall(1f, () =>
         {
@@ -76,9 +76,9 @@ public class Hint2 : MonoBehaviour, IInteractable
             DOVirtual.DelayedCall(0.5f, () =>
             {
                 PlayerInteraction.Instance.ResetScare();
-            
+
             });
-        }); 
+        });
     }
 
 

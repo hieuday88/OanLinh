@@ -10,18 +10,21 @@ public class DoorOpen : MonoBehaviour, IInteractable
     public Transform holder;
     public GameObject hintUI;
     public GameObject door;
+
+
+    public GameObject block;
     public void OnInteract()
     {
         hintUI.SetActive(true);
+        PlayerInteraction.Instance.isBusy = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         GameObject currentItem = Instantiate(doorPassWord, holder.position, Quaternion.identity);
-
         currentItem.transform.SetParent(holder);
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.transform.localRotation = Quaternion.identity;
         currentItem.transform.localScale = currentItem.transform.localScale * 1.5f;
-        
+
     }
 
     public void CloseDoorPassWord()
@@ -32,17 +35,19 @@ public class DoorOpen : MonoBehaviour, IInteractable
             var rotation = door.transform.localRotation;
             rotation.z = -99f;
             door.transform.localRotation = rotation;
+            block.SetActive(true);
         }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         hintUI.SetActive(false);
+        PlayerInteraction.Instance.isBusy = false;
 
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) ||
-            (PasswordManager.Instance != null && PasswordManager.Instance.isWin))
+        if (Input.GetMouseButton(1) ||
+                (PasswordManager.Instance != null && PasswordManager.Instance.isWin))
         {
             CloseDoorPassWord();
         }

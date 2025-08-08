@@ -6,7 +6,7 @@ public class Phone : MonoBehaviour, IInteractable
 {
     public string title;
     public GameObject dialogue;
-
+    public GameObject blood;
     public Transform hint;
 
     void Start()
@@ -19,6 +19,7 @@ public class Phone : MonoBehaviour, IInteractable
         title = "Nghe điện thoại";
         SoundManager.Instance.StopSFXLoop();
         dialogue.SetActive(true);
+        blood.SetActive(true);
         hint.localPosition = new Vector3(30, -33, -9);
     }
 

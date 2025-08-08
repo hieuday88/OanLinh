@@ -1,3 +1,4 @@
+﻿using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ public class IventoryManager : Singleton<IventoryManager>
     public bool isTaking = false;
     public bool isUseItem = false;
     public bool canUseItem = false;
+    public bool first = false;
+    public GameObject guide;
 
     private void Update()
     {
@@ -39,6 +42,16 @@ public class IventoryManager : Singleton<IventoryManager>
         items.Add(item);
         currentItem = item;
         DisplayItems();
+
+        if (!first)
+        {
+            guide.SetActive(true);
+
+            DOVirtual.DelayedCall(2f, () =>
+            {
+                first = true;
+            });
+        }
     }
 
     public void SetPrefab(GameObject prefab)
