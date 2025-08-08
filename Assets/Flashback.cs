@@ -9,25 +9,33 @@ public class Flashback : MonoBehaviour, IInteractable
     public GameObject end;
     public void OnInteract()
     {
-        if (!SceneManager.GetSceneByName("Flashback").isLoaded)
+        PlayerInteraction.Instance.StartFlashbackStrongNoise();
+        
+        DOVirtual.DelayedCall(0.5f, () =>
         {
-            SceneManager.LoadSceneAsync("Flashback", LoadSceneMode.Additive).completed += (op) =>
+
+            if (!SceneManager.GetSceneByName("Flashback").isLoaded)
+            {
+                SceneManager.LoadSceneAsync("Flashback", LoadSceneMode.Additive).completed += (op) =>
+                {
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByName("Flashback"));
+                };
+            }
+            else
             {
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName("Flashback"));
-            };
-        }
-        else
-        {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Flashback"));
-        }
+            }
 
-        title = "";
+            title = "";
 
-        DOVirtual.DelayedCall(1f, () =>
-        {
-            note.SetActive(true);
-            end.SetActive(true);
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                note.SetActive(true);
+                end.SetActive(true);
+            });
+            
         });
+        
     }
 
     public string Infor()

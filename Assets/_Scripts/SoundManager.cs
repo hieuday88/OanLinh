@@ -25,6 +25,7 @@ public class SoundManager : Singleton<SoundManager>
     public AudioClip horror2;
     public AudioClip waterFall;
     public AudioClip keyFall;
+    public AudioClip La;
 
     [Header("Finally")]
     public AudioClip woodFall;

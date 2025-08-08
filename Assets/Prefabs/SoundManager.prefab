@@ -318,6 +318,7 @@ MonoBehaviour:
   horror2: {fileID: 8300000, guid: 51f4b7d15f5d229498ac9aa8abd1ab4d, type: 3}
   waterFall: {fileID: 8300000, guid: 07ccb562af1a95e42aaf0ea0bfc24f69, type: 3}
   keyFall: {fileID: 8300000, guid: 4381bcda768be354e8bbd898e03c0c8f, type: 3}
+  La: {fileID: 8300000, guid: 2dc224eb97e378843b53c77cba7d35d3, type: 3}
   woodFall: {fileID: 8300000, guid: c946a3e1f25c7244ea588e6026ca5f67, type: 3}
   phoneRang: {fileID: 8300000, guid: 3d18774847484b34da60cfb592fb7be7, type: 3}
   wind: {fileID: 8300000, guid: f1070688f86a90847a8a3b9ec43ceb82, type: 3}

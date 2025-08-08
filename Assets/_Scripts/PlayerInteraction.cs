@@ -1,8 +1,13 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.Rendering.Universal;
+using Bloom = UnityEngine.Rendering.Universal.Bloom;
+using Vignette = UnityEngine.Rendering.Universal.Vignette;
+
 
 
 public class PlayerInteraction : Singleton<PlayerInteraction>
@@ -92,6 +97,97 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
         }
 
     }
+
+    public void StartFlashbackStrongNoise()
+    {
+        // Màu tối phủ màn hình
+        if (volume.profile.TryGet<ColorAdjustments>(out var colorAdjustments))
+        {
+            colorAdjustments.colorFilter.overrideState = true;
+            colorAdjustments.colorFilter.value = new Color(10f, 10f, 10f); // gần đen
+        }
+
+        // Nhiễu mạnh
+        if (volume.profile.TryGet<FilmGrain>(out var grain))
+        {
+            grain.type.overrideState = true;
+            grain.type.value = FilmGrainLookup.Thin2;
+
+            grain.intensity.overrideState = true;
+            grain.intensity.value = 0.8f; // nhiễu mạnh
+
+            grain.response.overrideState = true;
+            grain.response.value = 1f;
+        }
+
+        // VHS nếu có
+        if (volume.profile.TryGet<VolFx.VhsVol>(out var vhs))
+        {
+            vhs._weight.overrideState = true;
+            vhs._weight.value = 1f;
+
+            vhs._noise.overrideState = true;
+            vhs._noise.value = 1f;
+
+            vhs._flickering.overrideState = true;
+            vhs._flickering.value = 0.5f;
+
+            vhs._rocking.overrideState = true;
+            vhs._rocking.value = 0.3f;
+        }
+
+        // Sau vài giây sẽ tự giảm hiệu ứng
+        Invoke(nameof(FadeOutFlashback), 1f); // chờ 1 giây rồi fade
+    }
+
+    public void PlayOpenShake()
+    {
+     Transform cam = mainCam.transform; // Thường là Main Camera
+    float shakeDuration = 1f;
+     float shakeStrength = 0.3f;
+     int vibrato = 20;
+        // Reset trước khi rung để không chồng hiệu ứng
+        cam.DOKill();
+        Vector3 originalPos = cam.localPosition;
+        SoundManager.Instance.PlaySFX(SoundManager.Instance.La);
+        // Rung trong 1 giây
+        cam.DOShakePosition(shakeDuration, shakeStrength, vibrato)
+            .OnComplete(() =>
+            {
+                cam.localPosition = originalPos; // trả về đúng vị trí ban đầu
+            });
+    }
+
+    public void FadeOutFlashback()
+    {
+        // Fade màu tối về sáng dần
+        if (volume.profile.TryGet<ColorAdjustments>(out var colorAdjustments))
+        {
+            DOTween.To(() => colorAdjustments.colorFilter.value.r, r =>
+            {
+                Color c = colorAdjustments.colorFilter.value;
+                c.r = c.g = c.b = r;
+                colorAdjustments.colorFilter.value = c;
+            }, 1f, 2f); // từ đen -> trắng nhạt
+        }
+
+        // Fade nhiễu
+        if (volume.profile.TryGet<FilmGrain>(out var grain))
+        {
+            DOTween.To(() => grain.intensity.value, x => grain.intensity.value = x, 0f, 2f);
+        }
+
+        // Fade VHS
+        if (volume.profile.TryGet<VolFx.VhsVol>(out var vhs))
+        {
+            DOTween.To(() => vhs._weight.value, x => vhs._weight.value = x, 0f, 2f);
+            DOTween.To(() => vhs._noise.value, x => vhs._noise.value = x, 0f, 2f);
+            DOTween.To(() => vhs._flickering.value, x => vhs._flickering.value = x, 0f, 2f);
+            DOTween.To(() => vhs._rocking.value, x => vhs._rocking.value = x, 0f, 2f);
+        }
+    }
+
+
 
     public void ResetScare()
     {

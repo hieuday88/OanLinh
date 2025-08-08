@@ -21,6 +21,7 @@ public class DoorOpen : MonoBehaviour, IInteractable
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.transform.localRotation = Quaternion.identity;
         currentItem.transform.localScale = currentItem.transform.localScale * 1.5f;
+        
     }
 
     public void CloseDoorPassWord()
