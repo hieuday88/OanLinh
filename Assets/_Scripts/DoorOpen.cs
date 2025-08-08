@@ -7,23 +7,23 @@ public class DoorOpen : MonoBehaviour, IInteractable
 {
 
     public GameObject doorPassWord;
-    public Transform holder;
-    public GameObject hintUI;
+    // public Transform holder;
+    // public GameObject hintUI;
     public GameObject door;
+    public FirstPersonLook look;
+    public Rigidbody rb;
 
 
     public GameObject block;
     public void OnInteract()
     {
-        hintUI.SetActive(true);
+        // hintUI.SetActive(true);
         PlayerInteraction.Instance.isBusy = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        GameObject currentItem = Instantiate(doorPassWord, holder.position, Quaternion.identity);
-        currentItem.transform.SetParent(holder);
-        currentItem.transform.localPosition = Vector3.zero;
-        currentItem.transform.localRotation = Quaternion.identity;
-        currentItem.transform.localScale = currentItem.transform.localScale * 1.5f;
+        look.enabled = false;
+        rb.isKinematic = true;
+        doorPassWord.SetActive(true);
 
     }
 
@@ -39,7 +39,9 @@ public class DoorOpen : MonoBehaviour, IInteractable
         }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        hintUI.SetActive(false);
+        look.enabled = true;
+        rb.isKinematic = false;
+        doorPassWord.SetActive(false);
         PlayerInteraction.Instance.isBusy = false;
 
     }

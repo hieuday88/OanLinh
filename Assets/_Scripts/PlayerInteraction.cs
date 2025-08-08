@@ -29,6 +29,8 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     public Volume volume;
     private GameObject lastTarget = null;
+    
+    public bool isPlashBack = false;
 
     void Start()
     {
@@ -113,7 +115,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
         if (volume.profile.TryGet<ColorAdjustments>(out var colorAdjustments))
         {
             colorAdjustments.colorFilter.overrideState = true;
-            colorAdjustments.colorFilter.value = new Color(10f, 10f, 10f); // gần đen
+            colorAdjustments.colorFilter.value = new Color(5f, 5f, 5f); // gần đen
         }
 
         // Nhiễu mạnh

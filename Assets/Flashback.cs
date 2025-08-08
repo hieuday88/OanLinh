@@ -7,8 +7,10 @@ public class Flashback : MonoBehaviour, IInteractable
     public string title = "Có một ký ức mơ hồ ở đây";
     public GameObject note;
     public GameObject end;
+    public GameObject block;
     public void OnInteract()
     {
+        block.SetActive(false);
         PlayerInteraction.Instance.StartFlashbackStrongNoise();
         
         DOVirtual.DelayedCall(0.5f, () =>

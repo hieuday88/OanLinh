@@ -4794,6 +4794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4062418eed6b6df4d8c39533f11fb691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 137420872}
   lane1: {fileID: 557685238}
   lane2: {fileID: 1429239061}
   _speed: 30

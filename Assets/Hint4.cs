@@ -17,6 +17,7 @@ public class Hint4 : MonoBehaviour, IInteractable
         if (ItemPlacer.Instance.TryPlaceItem(id, itemPrefab))
         {
             title = "Ổn rồi đó";
+            this.gameObject.SetActive(false);
         }
         else
         {

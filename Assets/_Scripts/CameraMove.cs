@@ -64,13 +64,13 @@ public class CameraMove : MonoBehaviour
         player.transform.DOMoveZ(targetCamPos.z, moveDuration).SetEase(Ease.InOutSine);
 
         // Xoay camera bằng Euler angles
-        camera.transform.DORotate(targetEulerAngles, moveDuration, RotateMode.FastBeyond360)
+        player.transform.DORotate(targetEulerAngles, moveDuration, RotateMode.FastBeyond360)
             .SetEase(Ease.InOutSine)
             .OnComplete(() =>
             {
                 // Gán lại chính xác góc cuối cùng bằng Euler để tránh sai số
                 player.transform.localRotation = Quaternion.Euler(targetEulerAngles);
-                camera.localRotation = Quaternion.Euler(targetEulerAngles); // CHÚ Ý dùng localRotation nếu dùng DOLocalRotate
+                player.transform.localRotation = Quaternion.Euler(targetEulerAngles); // CHÚ Ý dùng localRotation nếu dùng DOLocalRotate
 
                 DOVirtual.DelayedCall(stayDuration, () =>
                 {

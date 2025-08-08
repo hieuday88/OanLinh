@@ -6,20 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d76d0f51-a682-40e9-8af5-e7910de4d2f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OanLinh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Back.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Back.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Flashback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Flashback.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hint2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint2.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hint3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint3.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Puerta 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Puerta 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/screen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/screen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hint4.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hint4.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MatMa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MatMa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SoundManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SoundManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Flashback.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset_ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Ultra_PipelineAsset_ForwardRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/DFVN-DarumadropOne SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/DFVN-DarumadropOne SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/SVN-Another Danger SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/SVN-Another Danger SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/CarController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/DoorOpen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/MatMa/PasswordManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/MatMa/PasswordManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PipeOpen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PipeOpen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +54,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UnlockAllDoor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Shaders/Lit.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.7/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -145,13 +150,15 @@
       <workItem from="1754500911157" duration="4316000" />
       <workItem from="1754536794118" duration="3504000" />
       <workItem from="1754549823480" duration="1263000" />
-      <workItem from="1754633368134" duration="12167000" />
+      <workItem from="1754633368134" duration="12429000" />
+      <workItem from="1754671755044" duration="8895000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />

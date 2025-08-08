@@ -22,7 +22,7 @@ public class PipeOpen : MonoBehaviour, IInteractable
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || PipeManager.Instance.isWin)
+        if (Input.GetMouseButtonDown(1) || PipeManager.Instance.isWin)
         {
             ClosePipe();
         }

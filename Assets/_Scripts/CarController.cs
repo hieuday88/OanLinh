@@ -8,7 +8,7 @@ using Sequence = DG.Tweening.Sequence;
 
 public class CarController : MonoBehaviour
 {
-    private Rigidbody rb;
+    public Rigidbody rb;
     public Transform lane1;
     public Transform lane2;
 
@@ -79,9 +79,11 @@ public class CarController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("CarEnd"))
         {
+            PlayerInteraction.Instance.isPlashBack = true;
             SoundManager.Instance.PlaySFX(SoundManager.Instance.crashCar);
             SoundManager.Instance.StopSFXLoop();
             string currentScene = SceneManager.GetActiveScene().name;
+            PlayerInteraction.Instance.StartFlashbackStrongNoise();
             SoundManager.Instance.ContinueMusic();
             if (!SceneManager.GetSceneByName("Main").isLoaded)
             {
@@ -89,12 +91,14 @@ public class CarController : MonoBehaviour
                 {
                     SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
                     SceneManager.UnloadSceneAsync(currentScene);
+                    PlayerInteraction.Instance.ResetScare();
                 };
             }
             else
             {
                 SceneManager.SetActiveScene(SceneManager.GetSceneByName("Main"));
                 SceneManager.UnloadSceneAsync(currentScene);
+                PlayerInteraction.Instance.ResetScare();
             }
         }
     }
