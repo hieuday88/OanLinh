@@ -6,6 +6,13 @@ public class ButtonManager : Singleton<ButtonManager>
 {
     public GameObject mainMenu;
     public GameObject settingsMenu;
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void OnPlayButtonClicked()
     {
         LoadSceneManager.Instance.LoadScene("Main");
@@ -30,4 +37,3 @@ public class ButtonManager : Singleton<ButtonManager>
         settingsMenu.SetActive(false);
     }
 }
-

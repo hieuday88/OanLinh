@@ -76,6 +76,8 @@ public class ItemUIManager : Singleton<ItemUIManager>
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        SoundManager.Instance.musicAudioSource.clip = SoundManager.Instance.musicClipOut;
+        SoundManager.Instance.musicAudioSource.Play();
     }
     public void OpenInventory()
     {

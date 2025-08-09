@@ -12,6 +12,12 @@ public class LoadSceneManager : Singleton<LoadSceneManager>
 
     public bool save;
 
+    public GameObject setting;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     void Update()
     {
         if (save)
@@ -40,5 +46,10 @@ public class LoadSceneManager : Singleton<LoadSceneManager>
         var color = fadeImage.color;
         color.a = alpha;
         fadeImage.color = color;
+    }
+
+    public void OpenSetting()
+    {
+        setting.SetActive(true);
     }
 }
