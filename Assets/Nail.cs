@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Nail : MonoBehaviour, IInteractable
 {
-    public string title;
+    public string title = "Cần treo gì đó lên đinh";
     public int id;
     public GameObject _paper;
     public GameObject hint;
@@ -20,7 +20,6 @@ public class Nail : MonoBehaviour, IInteractable
         }
         else
         {
-            title = "Cần treo gì đó lên đinh";
             if (firstTime)
             {
                 firstTime = false;

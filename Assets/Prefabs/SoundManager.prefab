@@ -319,9 +319,10 @@ MonoBehaviour:
   waterFall: {fileID: 8300000, guid: 07ccb562af1a95e42aaf0ea0bfc24f69, type: 3}
   keyFall: {fileID: 8300000, guid: 4381bcda768be354e8bbd898e03c0c8f, type: 3}
   La: {fileID: 8300000, guid: 2dc224eb97e378843b53c77cba7d35d3, type: 3}
+  baby: {fileID: 0}
   woodFall: {fileID: 8300000, guid: c946a3e1f25c7244ea588e6026ca5f67, type: 3}
   phoneRang: {fileID: 8300000, guid: 3d18774847484b34da60cfb592fb7be7, type: 3}
-  wind: {fileID: 8300000, guid: f1070688f86a90847a8a3b9ec43ceb82, type: 3}
+  wind: {fileID: 8300000, guid: c435d7a2c14deb547b3b48e63fcc97c7, type: 3}
   ting: {fileID: 8300000, guid: 229671b5c781fc44da60269f2e7b32d2, type: 3}
   runCar: {fileID: 8300000, guid: 086b623b717558248b8c1557f05a50d3, type: 3}
   crashCar: {fileID: 8300000, guid: b3e007176d50ebd4dbf81018a9f298d8, type: 3}

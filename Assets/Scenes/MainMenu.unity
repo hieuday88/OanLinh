@@ -917,6 +917,7 @@ GameObject:
   - component: {fileID: 1553534310}
   - component: {fileID: 1553534309}
   - component: {fileID: 1553534312}
+  - component: {fileID: 1553534313}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1043,6 +1044,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1553534313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553534308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19355c7ed69a89d47a0c70a1f3bc6dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1710762168 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6199326319297893686, guid: 47bf1d2652db03245a83330a67f39b10, type: 3}
@@ -1538,6 +1551,10 @@ PrefabInstance:
       propertyPath: baby
       value: 
       objectReference: {fileID: 8300000, guid: 7c112a2f051bac64299f8b652f87e53f, type: 3}
+    - target: {fileID: 3213560888790980561, guid: 61996e5d84508f547ab3613287022066, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 8300000, guid: c435d7a2c14deb547b3b48e63fcc97c7, type: 3}
     - target: {fileID: 3341159293672711602, guid: 61996e5d84508f547ab3613287022066, type: 3}
       propertyPath: back
       value: 

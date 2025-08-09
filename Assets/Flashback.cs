@@ -12,7 +12,7 @@ public class Flashback : MonoBehaviour, IInteractable
     {
         block.SetActive(false);
         PlayerInteraction.Instance.StartFlashbackStrongNoise();
-        
+
         DOVirtual.DelayedCall(0.5f, () =>
         {
 
@@ -34,10 +34,12 @@ public class Flashback : MonoBehaviour, IInteractable
             {
                 note.SetActive(true);
                 end.SetActive(true);
+                gameObject.layer = 0;
+
             });
-            
+
         });
-        
+
     }
 
     public string Infor()

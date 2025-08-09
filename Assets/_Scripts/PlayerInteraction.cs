@@ -29,7 +29,7 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
     public Volume volume;
     private GameObject lastTarget = null;
-    
+
     public bool isPlashBack = false;
 
     void Start()
@@ -55,15 +55,11 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
 
             if (interactable != null)
             {
-                // Chỉ cập nhật UI khi khác vật cũ
-                if (target != lastTarget)
-                {
-                    lastTarget = target;
-                    infoText.text = interactable.Infor();
-                    infoText.enabled = true;
-                    crosshairImage.color = Color.white;
-                    crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-                }
+
+                infoText.text = interactable.Infor();
+                infoText.enabled = true;
+                crosshairImage.color = Color.white;
+                crosshairImage.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
                 isPickup = true;
 
@@ -72,19 +68,15 @@ public class PlayerInteraction : Singleton<PlayerInteraction>
                     Debug.Log("Đã tương tác với: " + interactable.Infor());
                     interactable.OnInteract();
                 }
-                return; // tránh else phía dưới
+                return;
             }
         }
+        infoText.enabled = false;
 
-        // Nếu không hit hoặc không phải interactable
-        if (lastTarget != null)
-        {
-            lastTarget = null;
-            infoText.enabled = false;
-            crosshairImage.color = originalCrosshairColor;
-            crosshairImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            isPickup = false;
-        }
+        crosshairImage.color = originalCrosshairColor;
+        crosshairImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        isPickup = false;
+
     }
 
 
