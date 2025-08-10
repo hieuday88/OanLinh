@@ -28,6 +28,7 @@ public class Back : MonoBehaviour
             // doll2.SetActive(false);
             // doll3.SetActive(false);
             // hint3.SetActive(false);
+            hint3.SetActive(false);
             this.gameObject.SetActive(false);
             Debug.Log("Đã tắt");
         }
